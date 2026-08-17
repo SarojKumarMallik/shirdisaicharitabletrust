@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - SEO & Image Background Breadcrumb Styles
+   ========================================================================== */
+
+.breadcrum-hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 55px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+  text-align: left;
+}
+
+/* Dark Rich Gradient Overlay for Maximum Text Contrast & Aesthetic Depth */
+.breadcrum-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 13, 26, 0.96) 0%,
+    rgba(8, 24, 56, 0.88) 45%,
+    rgba(5, 13, 26, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.breadcrum-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.22) 0%, rgba(230, 126, 34, 0.08) 50%, transparent 70%);
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+/* Breadcrumb Navigation Pill Badge */
+.breadcrum-list {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  padding: 8px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+}
+
+.breadcrum-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.breadcrum-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.breadcrum-link:hover {
+  color: #f3d068;
+  text-shadow: 0 0 8px rgba(243, 208, 104, 0.5);
+  text-decoration: none;
+}
+
+.breadcrum-current {
+  color: #f3d068;
+  font-weight: 600;
+}
+
+.breadcrum-separator {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Main Left-Aligned H1 Title for SEO */
+.breadcrum-title {
+  font-family: 'Cinzel', serif, system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  letter-spacing: 0.6px;
+  line-height: 1.2;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Decorative Gold Accent Bar under H1 */
+.breadcrum-accent-bar {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #c59b27 0%, #e67e22 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(197, 155, 39, 0.5);
+}
+
+/* Subtitle Description */
+.breadcrum-subtitle {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 680px;
+  opacity: 0.95;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Bottom Decorative Gradient Line */
+.breadcrum-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #c59b27 0%, #e67e22 50%, #c59b27 100%);
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .breadcrum-hero-section {
+    padding: 40px 0;
+  }
+  .breadcrum-title {
+    font-size: 2rem;
+  }
+  .breadcrum-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .breadcrum-hero-section {
+    padding: 32px 0;
+  }
+  .breadcrum-title {
+    font-size: 1.65rem;
+  }
+  .breadcrum-subtitle {
+    font-size: 0.88rem;
+  }
+}

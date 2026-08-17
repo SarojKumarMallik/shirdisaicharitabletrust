@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../assets/logo6.png';
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -127,7 +127,7 @@ const Navbar = () => {
                   to="/"
                   onClick={handleNavClick}
                 >
-                  <i className="bi bi-house-door-fill me-1 nav-icon-sm"></i>
+                  
                   Home
                 </Link>
               </li>
@@ -135,13 +135,13 @@ const Navbar = () => {
               {/* Dropdown: About Us */}
               <li className="nav-item dropdown">
                 <a
-                  className={`nav-link dropdown-toggle trust-nav-item ${currentPath.startsWith('/about') || currentPath === '/trustees' ? 'active' : ''} ${openDropdown === 'about' ? 'show' : ''}`}
+                  className={`nav-link trust-nav-item ${currentPath.startsWith('/about') || currentPath === '/trustees' ? 'active' : ''} ${openDropdown === 'about' ? 'show' : ''}`}
                   href="/about"
                   role="button"
                   aria-expanded={openDropdown === 'about'}
                   onClick={(e) => toggleDropdown(e, 'about')}
                 >
-                  About Us
+                  About Us <i className={`bi bi-chevron-down ms-1 dropdown-chevron ${openDropdown === 'about' ? 'rotate' : ''}`}></i>
                 </a>
                 <ul className={`dropdown-menu trust-dropdown-menu ${openDropdown === 'about' ? 'show' : ''}`}>
                   <li>
@@ -150,8 +150,8 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/trustees" onClick={handleNavClick}>
-                      <i className="bi bi-people me-2 text-warning"></i>Trustees & Management
+                    <Link className="dropdown-item" to="/ourteam" onClick={handleNavClick}>
+                      <i className="bi bi-people me-2 text-warning"></i>Our Team
                     </Link>
                   </li>
                 </ul>

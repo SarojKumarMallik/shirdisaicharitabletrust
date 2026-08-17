@@ -29,7 +29,7 @@
 /* Enforce max-width 1200px for Navbar & Topbar containers */
 .trust-header-wrapper .container-fluid,
 .trust-header-wrapper .container-xl {
-  max-width: 1300px !important;
+  max-width: 1200px !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -114,7 +114,7 @@
 .trust-navbar {
   background: #ffffff;
   padding: 0 !important;
-  min-height: 80px !important;
+  min-height: 65px !important;
   display: flex;
   align-items: center;
   transition: var(--trust-transition);
@@ -223,7 +223,7 @@
 
 .trust-nav-item:hover {
   color: var(--trust-primary-navy) !important;
-  background: rgba(8, 24, 56, 0.04);
+ 
 }
 
 .trust-nav-item:hover::after,
@@ -234,12 +234,28 @@
 .trust-nav-item.active {
   color: var(--trust-primary-navy) !important;
   font-weight: 700;
-  background: rgba(8, 24, 56, 0.07);
+  
 }
 
 .nav-icon-sm {
   font-size: 0.9rem;
   color: var(--trust-gold);
+}
+
+.dropdown-chevron {
+  font-size: 0.78rem;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.dropdown-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* Remove default Bootstrap dropdown caret arrow */
+.dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* Dropdown Customization */
@@ -347,42 +363,73 @@
    -------------------------------------------------------------------------- */
 .trust-toggler {
   border: none;
-  padding: 6px 8px;
+  padding: 4px;
   background: transparent;
   outline: none !important;
   box-shadow: none !important;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
   height: 36px;
-  width: 40px;
+  width: 36px;
+  position: relative;
+  margin-right: 0;
+  cursor: pointer;
 }
 
 .toggler-icon-bar {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2.5px;
   background-color: var(--trust-primary-navy);
   border-radius: 2px;
-  transition: var(--trust-transition);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, background-color 0.3s ease;
+  transform-origin: center;
 }
 
 .trust-toggler.collapsed-active .top-bar {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(7.5px) rotate(45deg);
   background-color: var(--trust-gold);
 }
 
 .trust-toggler.collapsed-active .middle-bar {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .trust-toggler.collapsed-active .bottom-bar {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: translateY(-7.5px) rotate(-45deg);
   background-color: var(--trust-gold);
 }
 
 /* Mobile Responsive Drawer adjustments */
 @media (max-width: 991.98px) {
+  /* Topbar Mobile: Only show location & phone number, hide socials and darshan */
+  .trust-topbar {
+    overflow-x: hidden;
+    padding: 5px 0;
+  }
+
+  .topbar-right,
+  .topbar-socials,
+  .darshan-badge {
+    display: none !important;
+  }
+
+  .topbar-left {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.76rem;
+    flex-wrap: nowrap;
+  }
+
+  .topbar-item {
+    font-size: 0.76rem;
+  }
+
   .navbar-collapse {
     background: #ffffff;
     border-radius: 12px;
@@ -416,5 +463,23 @@
   .btn-donate {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .topbar-left {
+    justify-content: space-between;
+    padding: 0 6px;
+    font-size: 0.73rem;
+  }
+
+  .topbar-item {
+    font-size: 0.73rem;
+  }
+
+  .trust-navbar .container-fluid,
+  .trust-navbar .container-xl {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }

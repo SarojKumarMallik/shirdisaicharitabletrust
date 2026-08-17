@@ -6,6 +6,9 @@ import Footer from './Components/Footer/Footer';
 import Hero from './Pages/Hero';
 
 import './App.css';
+import About from './Pages/About';
+import Ourteam from './Pages/Ourteam';
+import Contact from './Pages/Contact';
 
 const App = () => {
   return (
@@ -16,13 +19,13 @@ const App = () => {
         <main style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Hero />} />
-            <Route path="/about" element={<Hero />} />
-            <Route path="/trustees" element={<Hero />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/ourteam" element={<Ourteam />} />
             <Route path="/our-work" element={<Hero />} />
             <Route path="/event" element={<Hero />} />
             <Route path="/news" element={<Hero />} />
             <Route path="/gallery" element={<Hero />} />
-            <Route path="/contact" element={<Hero />} />
+            <Route path="/contact" element={<Contact/>} />
             <Route path="/donate" element={<Hero />} />
           </Routes>
         </main>

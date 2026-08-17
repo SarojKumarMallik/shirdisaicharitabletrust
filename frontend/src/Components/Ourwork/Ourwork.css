@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Our Work Section Styles
+   ========================================================================== */
+
+.ourwork-section {
+  background-color: #f8fafc;
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Elements */
+.ourwork-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  color: #081838;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.ourwork-title {
+  font-family: 'Cinzel', serif, system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 2.35rem;
+  color: #081838;
+  line-height: 1.25;
+}
+
+.ourwork-subtitle {
+  font-size: 1.05rem;
+  color: #5a6578;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ourwork-subtitle strong {
+  color: #081838;
+}
+
+/* --------------------------------------------------------------------------
+   Work Initiative Cards
+   -------------------------------------------------------------------------- */
+.ourwork-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(8, 24, 56, 0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ourwork-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(8, 24, 56, 0.12);
+  border-color: rgba(197, 155, 39, 0.45);
+}
+
+/* Image Container */
+.ourwork-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.ourwork-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ourwork-card:hover .ourwork-card-img {
+  transform: scale(1.06);
+}
+
+/* Floating Category Pill */
+.ourwork-category-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(8, 24, 56, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #f3d068;
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  z-index: 2;
+}
+
+/* Floating Icon Circle */
+.ourwork-icon-float {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c59b27 0%, #e67e22 100%);
+  color: #081838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.4);
+  border: 3px solid #ffffff;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.ourwork-card:hover .ourwork-icon-float {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #081838 0%, #0d2352 100%);
+  color: #f3d068;
+  border-color: #f3d068;
+}
+
+/* Card Body */
+.ourwork-card-body {
+  flex-grow: 1;
+}
+
+.ourwork-card-title {
+  font-family: 'Cinzel', serif, sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #081838;
+  line-height: 1.3;
+}
+
+.ourwork-title-line {
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #c59b27, #e67e22);
+  border-radius: 2px;
+}
+
+.ourwork-card-desc {
+  font-size: 0.95rem;
+  color: #5a6578;
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Simple Quotes Section
+   -------------------------------------------------------------------------- */
+.ourwork-simple-quote {
+  background: #ffffff;
+  border-radius: 16px;
+  border-left: 4px solid #c59b27;
+  border-right: 1.5px solid rgba(226, 232, 240, 0.8);
+  border-top: 1.5px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1.5px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 6px 20px rgba(8, 24, 56, 0.04);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.simple-quote-text {
+  font-family: 'Cinzel', serif, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #081838;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote-mark {
+  font-size: 1.6rem;
+  line-height: 1;
+  vertical-align: sub;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .ourwork-section {
+    padding: 50px 0;
+  }
+  .ourwork-title {
+    font-size: 1.85rem;
+  }
+  .simple-quote-text {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ourwork-title {
+    font-size: 1.55rem;
+  }
+  .ourwork-subtitle {
+    font-size: 0.95rem;
+  }
+  .ourwork-card-title {
+    font-size: 1.15rem;
+  }
+  .simple-quote-text {
+    font-size: 0.95rem;
+  }
+}

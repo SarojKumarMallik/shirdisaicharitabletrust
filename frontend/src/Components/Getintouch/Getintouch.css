@@ -1,0 +1,159 @@
+/* Getintouch.css */
+.getintouch-section {
+  background-color: #fffbf2;
+  position: relative;
+}
+
+/* Tag Badge */
+.contact-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #495057;
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 50px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #e67e22;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Left Section Heading & Description */
+.contact-left-title {
+  font-size: 2.25rem;
+  color: #2c3e50;
+  line-height: 1.25;
+}
+
+.text-highlight-orange {
+  color: #e67e22;
+}
+
+.contact-left-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Hero Image Card & Overlay */
+.contact-hero-card {
+  height: 340px;
+  overflow: hidden;
+  background-color: #1e293b;
+}
+
+.contact-hero-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-img-overlay {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.92) 100%);
+  backdrop-filter: blur(2px);
+}
+
+.contact-icon-btn {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
+}
+
+.bg-theme-orange {
+  background-color: #e67e22 !important;
+}
+
+.contact-btn-value:hover {
+  color: #ffe0b2 !important;
+}
+
+/* Form Card (Right Side) */
+.contact-form-card {
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Input Fields & Icon Positioning */
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 1.05rem;
+  pointer-events: none;
+  transition: color 0.3s ease;
+  z-index: 2;
+}
+
+.input-icon-wrapper.textarea-wrapper .input-field-icon {
+  top: 18px;
+  transform: none;
+}
+
+.input-icon-wrapper:focus-within .input-field-icon {
+  color: #e67e22;
+}
+
+.contact-input {
+  background-color: #f8f9fa;
+  border: 1px solid #f1f3f5;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none !important;
+}
+
+.contact-input.has-icon {
+  padding-left: 46px !important;
+}
+
+.contact-input::placeholder {
+  color: #adb5bd;
+}
+
+.contact-input:focus,
+.contact-input:focus-visible {
+  background-color: #ffffff;
+  border-color: #ffe0b2 !important;
+  box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.15) !important;
+  outline: none !important;
+}
+
+/* Submit Button */
+.btn-theme-orange {
+  background-color: #e67e22;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-theme-orange:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230, 126, 34, 0.35) !important;
+}
+
+.x-small {
+  font-size: 0.78rem;
+}

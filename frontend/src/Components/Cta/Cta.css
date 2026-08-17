@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Left & Right CTA Component Styles
+   ========================================================================== */
+
+.cta-volunteer-section {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&q=80&w=1920');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 40px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(197, 155, 39, 0.3);
+  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+  text-align: left;
+}
+
+.cta-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 13, 26, 0.95) 0%,
+    rgba(8, 24, 56, 0.9) 50%,
+    rgba(5, 13, 26, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+.cta-bg-glow {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.22) 0%, rgba(230, 126, 34, 0.08) 50%, transparent 70%);
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+/* Badge Header */
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #e63946 0%, #d9381e 100%);
+  color: #ffffff;
+  padding: 6px 20px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(217, 56, 30, 0.4);
+}
+
+/* Section Main Heading Title */
+.cta-title {
+  font-family: 'Cinzel', serif, system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+
+.cta-description {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.65;
+  opacity: 0.95;
+  max-width: 640px;
+}
+
+/* Feature Items Grid */
+.cta-feature-item {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  padding: 16px;
+  border-radius: 14px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.cta-feature-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #c59b27;
+  transform: translateY(-3px);
+}
+
+.cta-feature-icon {
+  font-size: 1.3rem;
+}
+
+.cta-feature-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.cta-feature-desc {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+/* Right Side Action Card */
+.cta-action-card {
+  background: rgba(8, 24, 56, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(197, 155, 39, 0.4);
+  padding: 22px 24px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card-title {
+  font-family: 'Cinzel', serif, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.cta-card-subtitle {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* Buttons */
+.btn-volunteer-primary {
+  background: linear-gradient(135deg, #c59b27 0%, #e67e22 100%);
+  color: #081838 !important;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.btn-volunteer-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(197, 155, 39, 0.6);
+  background: linear-gradient(135deg, #ffd700 0%, #ff9f1c 100%);
+}
+
+.btn-volunteer-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.btn-volunteer-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #f3d068;
+  color: #f3d068 !important;
+  transform: translateY(-2px);
+}
+
+/* Volunteer Avatar Social Proof */
+.volunteer-avatar-group {
+  margin-right: 4px;
+}
+
+.volunteer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #c59b27;
+  object-fit: cover;
+  margin-left: -10px;
+}
+
+.volunteer-avatar:first-child {
+  margin-left: 0;
+}
+
+.proof-number {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #f3d068;
+}
+
+.proof-label {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .cta-volunteer-section {
+    padding: 50px 0;
+  }
+  .cta-title {
+    font-size: 1.95rem;
+  }
+  .cta-action-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta-title {
+    font-size: 1.55rem;
+  }
+  .cta-description {
+    font-size: 0.92rem;
+  }
+}

@@ -1,47 +1,80 @@
 /* ==========================================================================
-   Sri Shirdi Sai Charitable Trust - Footer Component Stylesheet
-   Designed to match Navy Blue (#081838) & Royal Gold (#C59B27) Theme
+   Sri Shirdi Sai Charitable Trust - Premium Footer Component Stylesheet
+   Deep Royal Navy & Warm Temple Gold Theme
    ========================================================================== */
 
+:root {
+  --trust-navy-dark: #040915;
+  --trust-navy-mid: #081838;
+  --trust-navy-light: #0d234f;
+  --trust-gold: #e67e22;
+  --trust-gold-light: #f39c12;
+  --trust-gold-accent: #f5b041;
+}
+
 .trust-footer {
-  background: linear-gradient(135deg, #040915 0%, #081838 60%, #050c1e 100%);
+  background: radial-gradient(circle at 50% 0%, #0d234f 0%, #081838 50%, #040915 100%);
   color: #e2e8f0;
   font-family: 'Poppins', sans-serif;
-  border-top: 4px solid var(--trust-gold);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, transparent 0%, #f39c12 25%, #e67e22 50%, #f39c12 75%, transparent 100%) 1;
   position: relative;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 65px;
+}
+
+/* Subtle Ambient Glow */
+.trust-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(230, 126, 34, 0.12) 0%, rgba(8, 24, 56, 0) 70%);
+  pointer-events: none;
 }
 
 .footer-top {
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.25);
+  padding-bottom: 45px;
+  border-bottom: 1px solid rgba(243, 156, 18, 0.18);
+  position: relative;
+  z-index: 1;
 }
 
 .footer-brand-logo {
-  height: 60px;
+  height: 65px;
   width: auto;
-  max-width: 280px;
+  max-width: 290px;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.footer-brand-logo:hover {
+  transform: scale(1.02);
 }
 
 .footer-desc {
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: #cbd5e1;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
+/* Headings with Refined Temple Gold Line */
 .footer-heading {
   font-family: 'Cinzel', serif;
-  color: var(--trust-gold-light);
-  font-size: 1.15rem;
+  color: #fce7b2;
+  font-size: 1.18rem;
   font-weight: 700;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   position: relative;
-  padding-bottom: 10px;
-  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .footer-heading::after {
@@ -49,12 +82,14 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--trust-gold);
-  border-radius: 2px;
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, #f39c12 0%, #e67e22 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.6);
 }
 
+/* Footer Navigation Links */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -62,42 +97,53 @@
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .footer-links a {
   color: #cbd5e1;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
+  padding: 2px 0;
 }
 
 .footer-links a:hover {
-  color: var(--trust-gold-light);
-  padding-left: 6px;
+  color: #ffd166;
+  transform: translateX(6px);
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.35);
 }
 
 .footer-links a i {
-  color: var(--trust-gold);
+  color: #f39c12;
   font-size: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
+.footer-links a:hover i {
+  transform: translateX(2px);
+}
+
+/* Contact Items */
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-size: 0.88rem;
   color: #cbd5e1;
+  line-height: 1.5;
 }
 
 .footer-contact-item i {
-  color: var(--trust-gold);
-  font-size: 1.1rem;
+  color: #f39c12;
+  font-size: 1.05rem;
   margin-top: 2px;
+  flex-shrink: 0;
+  text-shadow: 0 0 8px rgba(243, 156, 18, 0.4);
 }
 
 .footer-contact-item a {
@@ -107,50 +153,106 @@
 }
 
 .footer-contact-item a:hover {
-  color: var(--trust-gold-light);
+  color: #ffd166;
 }
 
+/* Social Media Buttons */
 .footer-socials {
   display: flex;
-  gap: 10px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .footer-social-link {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(197, 155, 39, 0.3);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(243, 156, 18, 0.35);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  backdrop-filter: blur(4px);
 }
 
 .footer-social-link:hover {
-  background: var(--trust-gold);
-  color: var(--trust-primary-navy);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(197, 155, 39, 0.4);
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: #040915;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(230, 126, 34, 0.45);
+  border-color: #ffd166;
 }
 
-/* Bottom Copyright Bar */
+/* Footer Mini Map */
+.footer-mini-map {
+  border: 1px solid rgba(243, 156, 18, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  background-color: #040915;
+  transition: all 0.3s ease;
+}
+
+.footer-mini-map:hover {
+  border-color: #f39c12 !important;
+  box-shadow: 0 8px 22px rgba(243, 156, 18, 0.3);
+}
+
+.footer-mini-map iframe {
+  filter: contrast(1.05) saturate(1.15);
+  display: block;
+}
+
+/* ==========================================================================
+   Bottom Copyright Bar - Ultra Premium & Bright Accent
+   ========================================================================== */
+
 .footer-bottom {
   padding: 20px 0;
-  background: rgba(0, 0, 0, 0.3);
-  font-size: 0.85rem;
-  color: #94a3b8;
+  background: rgba(2, 6, 16, 0.95);
+  font-size: 0.88rem;
+  color: #a0aec0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-bottom a {
-  color: var(--trust-gold);
-  text-decoration: none;
+.footer-copyright-content {
+  line-height: 1.6;
 }
 
-.footer-bottom a:hover {
-  text-decoration: underline;
+.trust-name-highlight {
+  color: #ffd54f !important;
+  font-weight: 600;
+}
+
+/* Clean Inline Credit Styling */
+.creovate-credit-inline {
+  color: #64b5f6;
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.heart-emoji {
+  display: inline-block;
+  margin: 0 1px;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.creovate-highlight-link {
+  color: #ffd700 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  margin-left: 2px;
+}
+
+.creovate-highlight-link:hover {
+  color: #ffffff !important;
+  /* text-shadow: 0 0 10px #ffd700; */
+  text-decoration: underline !important;
 }

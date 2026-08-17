@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Why Choose Us Component Styles
+   ========================================================================== */
+
+.whychoose-section {
+  background-color: #f8fafc;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. Left Column: Image Collage & Floating Badges
+   -------------------------------------------------------------------------- */
+.whychoose-image-container {
+  padding: 20px 20px 40px 30px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Top Accent Dot */
+.whychoose-accent-dot {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  background-color: #e67e22;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(230, 126, 34, 0.5);
+}
+
+/* Main Background Image Card */
+.whychoose-main-img-card {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(8, 24, 56, 0.12);
+  background: #ffffff;
+  width: 88%;
+}
+
+.whychoose-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.whychoose-main-img-card:hover .whychoose-main-img {
+  transform: scale(1.03);
+}
+
+/* Top-Left Floating Active Volunteers Badge */
+.whychoose-volunteer-card {
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(8, 24, 56, 0.15);
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  z-index: 3;
+  min-width: 175px;
+}
+
+.volunteer-count {
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #081838;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.volunteer-label {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  margin-left: -8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.avatar-img:first-child {
+  margin-left: 0;
+}
+
+/* Bottom-Right Overlapping Sub Image */
+.whychoose-sub-img-card {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 48%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: 0 15px 35px rgba(8, 24, 56, 0.18);
+  z-index: 2;
+}
+
+.whychoose-sub-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   2. Right Column: Typography & Content
+   -------------------------------------------------------------------------- */
+
+/* Section Pill Badge */
+.whychoose-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  padding: 5px 16px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.badge-bullet {
+  color: #e67e22;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Main Heading Title */
+.whychoose-title {
+  font-family: 'Cinzel', serif, system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  font-size: 2.35rem;
+  color: #081838;
+  line-height: 1.22;
+  letter-spacing: 0.2px;
+}
+
+.whychoose-description {
+  font-size: 1.02rem;
+  color: #5a6578;
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Real Time Impact Tracking Card
+   -------------------------------------------------------------------------- */
+.whychoose-impact-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 25px rgba(8, 24, 56, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.3s ease;
+}
+
+.whychoose-impact-card:hover {
+  box-shadow: 0 14px 35px rgba(8, 24, 56, 0.1);
+  border-color: rgba(197, 155, 39, 0.35);
+}
+
+.impact-card-title {
+  font-weight: 700;
+  font-size: 1.12rem;
+  color: #081838;
+}
+
+.impact-title-line {
+  width: 50px;
+  height: 2px;
+  background: #e2e8f0;
+}
+
+.impact-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.impact-check-icon {
+  color: #e67e22;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.impact-img-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.impact-img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Divider Line */
+.whychoose-divider {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   4. Bottom Action CTA Button
+   -------------------------------------------------------------------------- */
+.btn-whychoose-cta {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #081838 0%, #0d2352 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 6px 6px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(8, 24, 56, 0.22);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+}
+
+.btn-whychoose-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(197, 155, 39, 0.4);
+  background: linear-gradient(135deg, #0c2048 0%, #c59b27 100%);
+}
+
+.cta-arrow-box {
+  background: #ffffff;
+  color: #081838;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-whychoose-cta:hover .cta-arrow-box {
+  background: #f3d068;
+  color: #081838;
+  transform: translate(2px, -2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .whychoose-section {
+    padding: 50px 0;
+  }
+  .whychoose-title {
+    font-size: 1.85rem;
+  }
+  .whychoose-main-img {
+    height: 380px;
+  }
+  .whychoose-sub-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .whychoose-volunteer-card {
+    top: 20px;
+    left: 0;
+    padding: 12px 14px;
+  }
+  .volunteer-count {
+    font-size: 1.15rem;
+  }
+  .whychoose-title {
+    font-size: 1.55rem;
+  }
+  .whychoose-main-img {
+    height: 320px;
+  }
+  .whychoose-sub-img {
+    height: 130px;
+  }
+}

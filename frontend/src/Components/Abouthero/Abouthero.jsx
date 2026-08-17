@@ -1,7 +1,7 @@
 import React from 'react';
-import './Heroabout.css';
+import './Abouthero.css';
 
-const Heroabout = () => {
+const Abouthero = () => {
   return (
     <section id="about" className="heroabout-section">
       <div className="container">
@@ -81,25 +81,7 @@ const Heroabout = () => {
               </div>
             </div>
 
-            {/* Bottom Action Row: CTA Button & Founder Profile (1 Row on Mobile) */}
-            <div className="heroabout-action-row">
-              <a href="/about" className="btn-heroabout-more">
-                <span>More About Us</span>
-                <i className="bi bi-arrow-up-right"></i>
-              </a>
-
-              <div className="heroabout-founder">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150"
-                  alt="Dr. Rudra Mohanty"
-                  className="founder-avatar"
-                />
-                <div className="founder-text-wrap">
-                  <h5 className="founder-name">Dr. Rudra Mohanty</h5>
-                  <p className="founder-role">Founder & Managing Director</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -107,4 +89,4 @@ const Heroabout = () => {
   );
 };
 
-export default Heroabout;
+export default Abouthero;

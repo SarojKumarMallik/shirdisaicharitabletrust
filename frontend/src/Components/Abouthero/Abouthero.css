@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Heroabout Component Stylesheet
+   Navy Blue (#081838) & Royal Gold (#C59B27) Theme - 1 Row Mobile Action Bar
+   ========================================================================== */
+
+.heroabout-section {
+  background-color: #fffbf2;
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   1. Left Column: 3 Overlapping Image Collage (Increased Size)
+   -------------------------------------------------------------------------- */
+.heroabout-image-collage {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  height: 540px;
+  margin: 0 auto;
+}
+
+/* Main Center Image */
+.collage-img-main {
+  position: absolute;
+  top: 45px;
+  left: 18%;
+  width: 60%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(8, 24, 56, 0.15);
+  border: 4px solid #ffffff;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+/* Top Right Overlapping Image */
+.collage-img-top-right {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  width: 46%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(8, 24, 56, 0.16);
+  border: 4px solid #ffffff;
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+
+/* Bottom Left Overlapping Image */
+.collage-img-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  width: 46%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(8, 24, 56, 0.16);
+  border: 4px solid #ffffff;
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+
+.heroabout-image-collage:hover .collage-img-main {
+  transform: scale(1.02);
+}
+
+.heroabout-image-collage:hover .collage-img-top-right {
+  transform: translateY(-4px);
+}
+
+.heroabout-image-collage:hover .collage-img-bottom-left {
+  transform: translateY(4px);
+}
+
+/* --------------------------------------------------------------------------
+   2. Right Column: Typography & Content Card
+   -------------------------------------------------------------------------- */
+.heroabout-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(197, 155, 39, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  color: #081838;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.heroabout-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 2.35rem;
+  line-height: 1.25;
+  color: #081838;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.heroabout-desc-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.heroabout-desc {
+  font-size: 0.96rem;
+  color: #5a6578;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Feature Box Cards Container (Icon Top -> Heading Below -> Paragraph Below) */
+.heroabout-box-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 16px;
+  border: 1px solid rgba(197, 155, 39, 0.22);
+  box-shadow: 0 6px 20px rgba(8, 24, 56, 0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.heroabout-box-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(197, 155, 39, 0.18);
+  border-color: rgba(197, 155, 39, 0.5);
+}
+
+.heroabout-icon-badge {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  background: #0c2048;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(12, 32, 72, 0.25);
+  border: 2px solid #c59b27;
+}
+
+.heroabout-icon-badge i {
+  color: #ffffff !important;
+}
+
+.heroabout-feature-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #081838;
+  margin-bottom: 6px;
+}
+
+.heroabout-feature-desc {
+  font-size: 0.84rem;
+  color: #5a6578;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Bottom Action Row: Navy Button (#0c2048) & Founder Profile
+   -------------------------------------------------------------------------- */
+.heroabout-action-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.btn-heroabout-more {
+  background: #0c2048;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid #c59b27;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  box-shadow: 0 5px 20px rgba(12, 32, 72, 0.35);
+  transition: all 0.35s ease;
+  text-transform: uppercase;
+}
+
+.btn-heroabout-more:hover {
+  background: #081838;
+  color: #f3d068 !important;
+  border-color: #f3d068;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(12, 32, 72, 0.55);
+}
+
+.btn-heroabout-more i {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-heroabout-more:hover i {
+  transform: translate(2px, -2px);
+}
+
+.heroabout-founder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.founder-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c59b27;
+  box-shadow: 0 3px 10px rgba(8, 24, 56, 0.15);
+}
+
+.founder-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #081838;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.founder-role {
+  font-size: 0.78rem;
+  color: #5a6578;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Responsive Optimization (1 Row Action Bar)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .heroabout-section {
+    padding: 45px 0;
+  }
+
+  .heroabout-image-collage {
+    height: 360px;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .collage-img-main {
+    top: 25px;
+    height: 280px;
+  }
+
+  .collage-img-top-right {
+    height: 150px;
+  }
+
+  .collage-img-bottom-left {
+    height: 160px;
+  }
+
+  .heroabout-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .heroabout-box-card {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .heroabout-feature-title {
+    font-size: 0.92rem;
+  }
+
+  .heroabout-feature-desc {
+    font-size: 0.76rem;
+  }
+
+  /* Force 1 single row side-by-side for Button & Founder profile on Mobile */
+  .heroabout-action-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .btn-heroabout-more {
+    padding: 9px 14px;
+    font-size: 0.75rem;
+  }
+
+  .btn-heroabout-more i {
+    font-size: 0.8rem;
+  }
+
+  .founder-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .founder-name {
+    font-size: 0.78rem;
+  }
+
+  .founder-role {
+    font-size: 0.7rem;
+  }
+}
