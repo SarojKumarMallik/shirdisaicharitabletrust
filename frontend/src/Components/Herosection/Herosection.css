@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Premium Responsive Hero Section
+   Full-Bleed Dynamic Backgrounds, Smooth Automatic Slide & Gold Aesthetics
+   ========================================================================== */
+
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background: #050d1a;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 60px 0 110px 0;
+}
+
+/* Slide Container */
+.hero-slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-slide-item.active-slide {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Background Image with Slow Ken-Burns Zoom & Gradient Overlay */
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 7s ease-out;
+  z-index: -2;
+}
+
+.hero-slide-item.active-slide .hero-bg-img {
+  animation: kenburns 8s infinite alternate ease-in-out;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+/* Dark Deep Navy & Warm Gold Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(5, 13, 26, 0.92) 0%, rgba(8, 24, 56, 0.85) 50%, rgba(5, 12, 29, 0.94) 100%);
+  z-index: -1;
+}
+
+.hero-overlay::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.25) 0%, rgba(230, 126, 34, 0.1) 50%, transparent 70%);
+  transform: translate(30%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+/* Slide Content Animation */
+.hero-slide-item.active-slide .hero-content-left {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-slide-item.active-slide .hero-content-right {
+  animation: fadeInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Subtitle Badge */
+.hero-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(197, 155, 39, 0.15);
+  border: 1px solid rgba(243, 208, 104, 0.4);
+  color: #f3d068;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Title */
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 2.6rem;
+  line-height: 1.22;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 20%, #f3d068 70%, #ff9f1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.65;
+  max-width: 540px;
+  margin-bottom: 26px;
+  opacity: 0.94;
+}
+
+/* Action Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.btn-hero-donate {
+  background: linear-gradient(135deg, #c59b27 0%, #e67e22 100%);
+  color: #081838 !important;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 5px 22px rgba(197, 155, 39, 0.45);
+  transition: all 0.35s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.btn-hero-donate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(197, 155, 39, 0.7);
+  background: linear-gradient(135deg, #ffd700 0%, #ff9f1c 100%);
+}
+
+.btn-hero-watch {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(243, 208, 104, 0.4);
+  transition: all 0.35s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.btn-hero-watch:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #f3d068;
+  color: #f3d068 !important;
+  transform: translateY(-3px);
+}
+
+.play-icon-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* Right Side Image Frame */
+.hero-image-frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-deity-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(197, 155, 39, 0.45);
+  background: rgba(8, 24, 56, 0.6);
+}
+
+.hero-deity-card img {
+  width: 100%;
+  max-width: 400px;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.deity-card-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(8, 24, 56, 0.85);
+  border: 1px solid var(--trust-gold-light);
+  color: #f3d068;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+
+.hero-deity-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Slider Arrow Controls */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(5, 13, 26, 0.6);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 15;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.slider-arrow:hover {
+  background: #c59b27;
+  color: #081838;
+  border-color: #f3d068;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 0 15px rgba(197, 155, 39, 0.6);
+}
+
+.slider-arrow-prev {
+  left: 20px;
+}
+
+.slider-arrow-next {
+  right: 20px;
+}
+
+/* Pagination Dots */
+.hero-pagination {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 15;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1.5px solid rgba(197, 155, 39, 0.6);
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.pagination-dot.active {
+  width: 32px;
+  border-radius: 10px;
+  background: var(--trust-gold);
+  box-shadow: 0 0 12px rgba(197, 155, 39, 0.8);
+}
+
+/* Slide Progress Timer Bar */
+.hero-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c59b27, #f3d068, #ff9f1c);
+  z-index: 20;
+  transition: width 0.1s linear;
+}
+
+/* Organic Golden Wave Curve Divider */
+.hero-bottom-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+}
+
+.hero-bottom-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+  filter: drop-shadow(0 -3px 8px rgba(197, 155, 39, 0.45));
+}
+
+/* Mobile Responsive Optimization - Straight Line Bottom & Left-Aligned Layout */
+@media (max-width: 991.98px) {
+  .hero-slider-section {
+    min-height: 65vh;
+    padding: 30px 0 50px 0;
+    border-bottom: 4px solid #c59b27;
+  }
+
+  .hero-content-left {
+    text-align: left !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    text-align: left !important;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 24px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start !important;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .btn-hero-donate,
+  .btn-hero-watch {
+    padding: 11px 22px;
+    font-size: 0.82rem;
+  }
+
+  /* Hide Prev/Next arrows on mobile */
+  .slider-arrow {
+    display: none !important;
+  }
+
+  /* Hide Pagination Dots on mobile */
+  .hero-pagination {
+    display: none !important;
+  }
+
+  /* Hide Organic Curve on Mobile -> Replaced by Straight Line Border */
+  .hero-bottom-wave {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-slider-section {
+    min-height: 60vh;
+    padding: 25px 0 45px 0;
+  }
+
+  .btn-hero-donate,
+  .btn-hero-watch {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 1.55rem;
+  }
+}

@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Header & Navbar Stylesheet
+   Precision Height (min-height: 80px) & Navy Blue (#081838) / Gold (#C59B27) Theme
+   ========================================================================== */
+
+:root {
+  --trust-primary-navy: #081838;
+  --trust-secondary-navy: #0d2352;
+  --trust-gold: #c59b27;
+  --trust-gold-light: #f3d068;
+  --trust-amber: #e67e22;
+  --trust-amber-glow: #ff9f1c;
+  --trust-dark: #0a1329;
+  --trust-text-muted: #5a6578;
+  --trust-light-bg: #fffbf2;
+  --trust-border-gold: rgba(197, 155, 39, 0.35);
+  --trust-shadow: 0 10px 30px rgba(8, 24, 56, 0.1);
+  --trust-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header Outer Wrapper */
+.trust-header-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 1050;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Enforce max-width 1200px for Navbar & Topbar containers */
+.trust-header-wrapper .container-fluid,
+.trust-header-wrapper .container-xl {
+  max-width: 1300px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
+   1. Top Announcement & Contact Bar
+   -------------------------------------------------------------------------- */
+.trust-topbar {
+  background: linear-gradient(135deg, #051026 0%, #081838 50%, #0c2048 100%);
+  color: #f8f9fa;
+  font-size: 0.84rem;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+  transition: var(--trust-transition);
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.trust-topbar::-webkit-scrollbar {
+  display: none;
+}
+
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  color: #e2e8f0;
+}
+
+.topbar-item a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: var(--trust-transition);
+}
+
+.topbar-item a:hover {
+  color: var(--trust-gold-light);
+  text-decoration: underline;
+}
+
+.topbar-divider {
+  color: rgba(197, 155, 39, 0.4);
+  font-size: 0.8rem;
+}
+
+.darshan-badge {
+  background: rgba(197, 155, 39, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.2px;
+  font-size: 0.82rem;
+}
+
+.topbar-socials .social-link {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  transition: var(--trust-transition);
+  text-decoration: none;
+}
+
+.topbar-socials .social-link:hover {
+  background: var(--trust-gold);
+  color: var(--trust-primary-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(197, 155, 39, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   2. Main Navbar Styling (Enforced min-height: 80px)
+   -------------------------------------------------------------------------- */
+.trust-navbar {
+  background: #ffffff;
+  padding: 0 !important;
+  min-height: 80px !important;
+  display: flex;
+  align-items: center;
+  transition: var(--trust-transition);
+  border-bottom: 3px solid var(--trust-gold);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.trust-navbar.navbar-sticky-scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 !important;
+  min-height: 65px !important;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--trust-shadow);
+  animation: slideDown 0.35s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Brand Logo Presentation - Scaled for 80px Navbar */
+.navbar-brand {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1.6rem;
+}
+
+.trust-logo-img {
+  height: 72px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  margin: 0;
+  padding: 2px 0;
+  display: block;
+  transition: var(--trust-transition);
+}
+
+.navbar-sticky-scrolled .trust-logo-img {
+  height: 58px;
+  max-width: 260px;
+}
+
+.navbar-brand:hover .trust-logo-img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 991.98px) {
+  .trust-logo-img {
+    height: 58px;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .trust-logo-img {
+    height: 48px;
+    max-width: 200px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Nav Links & Hover Effects
+   -------------------------------------------------------------------------- */
+.trust-nav-links {
+  gap: 8px;
+}
+
+.trust-nav-item {
+  color: var(--trust-dark) !important;
+  font-weight: 600;
+  font-size: 0.94rem;
+  padding: 8px 16px !important;
+  border-radius: 6px;
+  position: relative;
+  transition: var(--trust-transition);
+}
+
+.trust-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--trust-gold), var(--trust-amber-glow));
+  border-radius: 2px;
+  transition: var(--trust-transition);
+  transform: translateX(-50%);
+}
+
+.trust-nav-item:hover {
+  color: var(--trust-primary-navy) !important;
+  background: rgba(8, 24, 56, 0.04);
+}
+
+.trust-nav-item:hover::after,
+.trust-nav-item.active::after {
+  width: 70%;
+}
+
+.trust-nav-item.active {
+  color: var(--trust-primary-navy) !important;
+  font-weight: 700;
+  background: rgba(8, 24, 56, 0.07);
+}
+
+.nav-icon-sm {
+  font-size: 0.9rem;
+  color: var(--trust-gold);
+}
+
+/* Dropdown Customization */
+.trust-dropdown-menu {
+  display: none;
+  border: none;
+  border-top: 3px solid var(--trust-gold);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 15px 30px rgba(8, 24, 56, 0.12);
+  padding: 8px 0;
+  margin-top: 10px !important;
+}
+
+.trust-dropdown-menu.show {
+  display: block;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trust-dropdown-menu .dropdown-item {
+  padding: 9px 18px;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--trust-dark);
+  transition: var(--trust-transition);
+}
+
+.trust-dropdown-menu .dropdown-item:hover {
+  background: var(--trust-light-bg);
+  color: var(--trust-primary-navy);
+  padding-left: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Donate CTA Button
+   -------------------------------------------------------------------------- */
+.btn-donate {
+  background: linear-gradient(135deg, #081838 0%, #0e2e6b 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 1px solid var(--trust-gold-light);
+  box-shadow: 0 4px 15px rgba(8, 24, 56, 0.28);
+  transition: var(--trust-transition);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-donate::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 215, 0, 0.2);
+  transform: rotate(45deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-donate:hover::before {
+  transform: rotate(45deg) translateY(100%);
+}
+
+.btn-donate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.45);
+  background: linear-gradient(135deg, #0c2048 0%, #c59b27 100%);
+  color: #ffffff !important;
+}
+
+.heart-icon {
+  color: var(--trust-gold-light);
+  font-size: 0.9rem;
+  animation: pulseHeart 1.6s infinite ease-in-out;
+}
+
+@keyframes pulseHeart {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Mobile Toggler Styling
+   -------------------------------------------------------------------------- */
+.trust-toggler {
+  border: none;
+  padding: 6px 8px;
+  background: transparent;
+  outline: none !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 36px;
+  width: 40px;
+}
+
+.toggler-icon-bar {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--trust-primary-navy);
+  border-radius: 2px;
+  transition: var(--trust-transition);
+}
+
+.trust-toggler.collapsed-active .top-bar {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: var(--trust-gold);
+}
+
+.trust-toggler.collapsed-active .middle-bar {
+  opacity: 0;
+}
+
+.trust-toggler.collapsed-active .bottom-bar {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background-color: var(--trust-gold);
+}
+
+/* Mobile Responsive Drawer adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 8px;
+    box-shadow: 0 10px 25px rgba(8, 24, 56, 0.12);
+    border: 1px solid rgba(197, 155, 39, 0.25);
+  }
+
+  .trust-nav-links {
+    margin-bottom: 14px !important;
+  }
+
+  .trust-nav-item {
+    padding: 9px 12px !important;
+  }
+
+  .trust-nav-item::after {
+    display: none;
+  }
+
+  .trust-dropdown-menu {
+    box-shadow: none;
+    background: var(--trust-light-bg);
+    border: none;
+    border-left: 3px solid var(--trust-gold);
+    border-radius: 0;
+    margin-top: 4px !important;
+  }
+
+  .btn-donate {
+    width: 100%;
+    justify-content: center;
+  }
+}

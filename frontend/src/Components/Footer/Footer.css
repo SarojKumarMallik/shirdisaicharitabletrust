@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Footer Component Stylesheet
+   Designed to match Navy Blue (#081838) & Royal Gold (#C59B27) Theme
+   ========================================================================== */
+
+.trust-footer {
+  background: linear-gradient(135deg, #040915 0%, #081838 60%, #050c1e 100%);
+  color: #e2e8f0;
+  font-family: 'Poppins', sans-serif;
+  border-top: 4px solid var(--trust-gold);
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.25);
+}
+
+.footer-brand-logo {
+  height: 60px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  font-family: 'Cinzel', serif;
+  color: var(--trust-gold-light);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--trust-gold);
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a:hover {
+  color: var(--trust-gold-light);
+  padding-left: 6px;
+}
+
+.footer-links a i {
+  color: var(--trust-gold);
+  font-size: 0.8rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+
+.footer-contact-item i {
+  color: var(--trust-gold);
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.footer-contact-item a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+  color: var(--trust-gold-light);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background: var(--trust-gold);
+  color: var(--trust-primary-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(197, 155, 39, 0.4);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.footer-bottom a {
+  color: var(--trust-gold);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}

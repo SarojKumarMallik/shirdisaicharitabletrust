@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Herocard Component Stylesheet
+   3 Action Banner Cards Matched to Screenshot & Brand Logo Palette
+   ========================================================================== */
+
+.herocard-wrapper {
+  position: relative;
+  z-index: 15;
+  margin-top: -60px;
+  padding-bottom: 20px;
+}
+
+.herocard-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(8, 24, 56, 0.18);
+}
+
+/* Card 1: Deep Navy Blue (#081838) */
+.herocard-item-navy {
+  background: #081838;
+  color: #ffffff;
+  padding: 45px 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Card 2: Royal Gold (#c59b27) */
+.herocard-item-gold {
+  background: #c59b27;
+  color: #ffffff;
+  padding: 45px 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Card 3: Saffron Amber (#e67e22) */
+.herocard-item-saffron {
+  background: #e67e22;
+  color: #ffffff;
+  padding: 45px 35px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.herocard-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.herocard-desc {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 30px;
+}
+
+/* Ghost Outline Action Button */
+.btn-herocard-action {
+  background: transparent;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  padding: 10px 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  text-transform: uppercase;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-herocard-action:hover {
+  background: #ffffff;
+  color: #081838 !important;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.herocard-item-gold .btn-herocard-action:hover {
+  color: #c59b27 !important;
+}
+
+.herocard-item-saffron .btn-herocard-action:hover {
+  color: #e67e22 !important;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991.98px) {
+  .herocard-wrapper {
+    margin-top: 0;
+    padding-top: 25px;
+  }
+
+  .herocard-item-navy,
+  .herocard-item-gold,
+  .herocard-item-saffron {
+    padding: 30px 22px;
+  }
+
+  .herocard-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .herocard-desc {
+    font-size: 0.88rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .herocard-wrapper {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .herocard-container {
+    border-radius: 12px;
+  }
+}

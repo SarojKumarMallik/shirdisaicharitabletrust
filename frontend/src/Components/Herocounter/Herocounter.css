@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Herocounter Component Stylesheet
+   Navy Blue (#081838) & Royal Gold (#C59B27) Theme - 2 Cards Per Row on Mobile
+   ========================================================================== */
+
+.herocounter-section {
+  background-color: #fffbf2;
+  padding: 35px 0 55px 0;
+  position: relative;
+  z-index: 5;
+}
+
+/* --------------------------------------------------------------------------
+   1. Feature Cards Grid
+   -------------------------------------------------------------------------- */
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 16px;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  box-shadow: 0 6px 20px rgba(8, 24, 56, 0.05);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(197, 155, 39, 0.2);
+  border-color: rgba(197, 155, 39, 0.5);
+}
+
+.feature-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.feature-icon-badge {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  border-radius: 50%;
+  background: #0c2048;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(12, 32, 72, 0.35);
+  border: 2px solid #c59b27;
+}
+
+.feature-icon-badge i {
+  color: #ffffff !important;
+  font-size: 1.45rem !important;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #081838;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.feature-card-desc {
+  font-size: 0.84rem;
+  color: #5a6578;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.feature-card-line {
+  width: 28px;
+  height: 3px;
+  background: var(--trust-gold, #c59b27);
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Dark Navy & Gold Counter Bar
+   -------------------------------------------------------------------------- */
+.counter-bar-wrapper {
+  background: linear-gradient(135deg, #051026 0%, #081838 50%, #0c2048 100%);
+  border-radius: 18px;
+  border: 2px solid #c59b27;
+  padding: 22px 15px;
+  box-shadow: 0 10px 30px rgba(8, 24, 56, 0.25);
+  margin-top: 30px;
+}
+
+.counter-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 8px 12px;
+  position: relative;
+}
+
+/* Vertical Dividers between counter items on Desktop */
+.counter-col:not(:last-child) .counter-item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(197, 155, 39, 0.3);
+}
+
+.counter-icon-circle {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: #0c2048;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c59b27;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.counter-icon-circle i {
+  color: #ffffff !important;
+  font-size: 1.4rem !important;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-number {
+  font-family: 'Cinzel', serif;
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: #f3d068;
+  line-height: 1.1;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.counter-label {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: 0.2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Mobile 2-Card Per Row Responsive Adjustments (col-6)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .counter-col:not(:last-child) .counter-item::after {
+    display: none;
+  }
+
+  .feature-card {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .feature-card-header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .feature-icon-badge {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .feature-icon-badge i {
+    font-size: 1.15rem !important;
+  }
+
+  .feature-card-title {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .feature-card-desc {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  .counter-bar-wrapper {
+    padding: 16px 10px;
+  }
+
+  .counter-item {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 8px 6px;
+  }
+
+  .counter-icon-circle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .counter-icon-circle i {
+    font-size: 1.1rem !important;
+  }
+
+  .counter-number {
+    font-size: 1.35rem;
+  }
+
+  .counter-label {
+    font-size: 0.76rem;
+  }
+}
