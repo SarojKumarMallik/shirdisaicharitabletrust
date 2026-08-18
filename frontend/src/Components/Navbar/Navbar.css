@@ -26,7 +26,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Enforce max-width 1200px for Navbar & Topbar containers */
+/* Reduced max-width for Navbar & Topbar containers */
 .trust-header-wrapper .container-fluid,
 .trust-header-wrapper .container-xl {
   max-width: 1200px !important;
@@ -40,9 +40,12 @@
 .trust-topbar {
   background: linear-gradient(135deg, #051026 0%, #081838 50%, #0c2048 100%);
   color: #f8f9fa;
-  font-size: 0.84rem;
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(197, 155, 39, 0.3);
+  font-size: 0.83rem;
+  padding: 9px 0;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(197, 155, 39, 0.35);
   transition: var(--trust-transition);
   overflow-x: auto;
   white-space: nowrap;
@@ -58,6 +61,8 @@
   display: inline-flex;
   align-items: center;
   color: #e2e8f0;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .topbar-item a {
@@ -72,53 +77,35 @@
 }
 
 .topbar-divider {
-  color: rgba(197, 155, 39, 0.4);
+  color: rgba(197, 155, 39, 0.45);
   font-size: 0.8rem;
+  margin: 0 2px;
 }
 
 .darshan-badge {
-  background: rgba(197, 155, 39, 0.12);
-  border: 1px solid rgba(197, 155, 39, 0.4);
-  padding: 3px 12px;
+  background: rgba(197, 155, 39, 0.15);
+  border: 1px solid rgba(197, 155, 39, 0.45);
+  padding: 4px 12px;
   border-radius: 20px;
   font-weight: 500;
   color: #fff;
-  letter-spacing: 0.2px;
-  font-size: 0.82rem;
-}
-
-.topbar-socials .social-link {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
+  letter-spacing: 0.3px;
+  font-size: 0.8rem;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 0.78rem;
-  transition: var(--trust-transition);
-  text-decoration: none;
-}
-
-.topbar-socials .social-link:hover {
-  background: var(--trust-gold);
-  color: var(--trust-primary-navy);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(197, 155, 39, 0.4);
 }
 
 /* --------------------------------------------------------------------------
-   2. Main Navbar Styling (Enforced min-height: 80px)
+   2. Main Navbar Styling
    -------------------------------------------------------------------------- */
 .trust-navbar {
   background: #ffffff;
   padding: 0 !important;
-  min-height: 65px !important;
+  min-height: 70px !important;
   display: flex;
   align-items: center;
   transition: var(--trust-transition);
-  border-bottom: 3px solid var(--trust-gold);
+
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -128,7 +115,7 @@
   left: 0;
   right: 0;
   padding: 0 !important;
-  min-height: 65px !important;
+  min-height: 58px !important;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(12px);
   box-shadow: var(--trust-shadow);
@@ -145,7 +132,7 @@
   }
 }
 
-/* Brand Logo Presentation - Scaled for 80px Navbar */
+/* Brand Logo Presentation */
 .navbar-brand {
   text-decoration: none;
   cursor: pointer;
@@ -154,13 +141,13 @@
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-  margin-right: 1.6rem;
+  margin-right: 1.2rem;
 }
 
 .trust-logo-img {
-  height: 72px;
+  height: 62px;
   width: auto;
-  max-width: 320px;
+  max-width: 260px;
   object-fit: contain;
   margin: 0;
   padding: 2px 0;
@@ -169,8 +156,8 @@
 }
 
 .navbar-sticky-scrolled .trust-logo-img {
-  height: 58px;
-  max-width: 260px;
+  height: 50px;
+  max-width: 215px;
 }
 
 .navbar-brand:hover .trust-logo-img {
@@ -179,15 +166,15 @@
 
 @media (max-width: 991.98px) {
   .trust-logo-img {
-    height: 58px;
-    max-width: 260px;
+    height: 46px;
+    max-width: 200px;
   }
 }
 
 @media (max-width: 575.98px) {
   .trust-logo-img {
-    height: 48px;
-    max-width: 200px;
+    height: 40px;
+    max-width: 165px;
   }
 }
 
@@ -195,14 +182,14 @@
    3. Nav Links & Hover Effects
    -------------------------------------------------------------------------- */
 .trust-nav-links {
-  gap: 8px;
+  gap: 4px;
 }
 
 .trust-nav-item {
   color: var(--trust-dark) !important;
   font-weight: 600;
-  font-size: 0.94rem;
-  padding: 8px 16px !important;
+  font-size: 0.88rem;
+  padding: 6px 12px !important;
   border-radius: 6px;
   position: relative;
   transition: var(--trust-transition);

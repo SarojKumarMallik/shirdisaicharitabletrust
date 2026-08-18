@@ -1,0 +1,742 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Ourworkdesc Component Stylesheet
+   Navy Blue (#081838), Royal Gold (#C59B27) & Warm Cream (#fffbf2) Theme
+   ========================================================================== */
+
+.ourworkdesc-page-section {
+  background-color: #fffbf2;
+  padding: 60px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Ambient Glows */
+.workdesc-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  z-index: 1;
+  opacity: 0.15;
+}
+
+.workdesc-glow-1 {
+  top: -100px;
+  right: -100px;
+  background: #c59b27;
+}
+
+.workdesc-glow-2 {
+  bottom: 200px;
+  left: -150px;
+  background: #081838;
+}
+
+.max-w-800 {
+  max-width: 1200px;
+}
+
+/* --------------------------------------------------------------------------
+   1. Section Header & Badge
+   -------------------------------------------------------------------------- */
+.workdesc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(197, 155, 39, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  color: #081838;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 30px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.workdesc-main-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  color: #081838;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.workdesc-highlight {
+  color: #c59b27;
+  position: relative;
+  display: inline-block;
+}
+
+.workdesc-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(197, 155, 39, 0.2);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.workdesc-lead-text {
+  font-size: 1.05rem;
+  color: #526077;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   2. Global Stats Bar
+   -------------------------------------------------------------------------- */
+.workdesc-stats-bar {
+  background: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(8, 24, 56, 0.05);
+}
+
+.stat-mini-card {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stat-mini-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-mini-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.stat-mini-num {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #081838;
+  line-height: 1.2;
+}
+
+.stat-mini-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6c788d;
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Interactive Filter Pills (Centered & Wrapped on Mobile, 1-Row on Desktop)
+   -------------------------------------------------------------------------- */
+.workdesc-filter-wrapper {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.workdesc-filter-pill {
+  background: #ffffff;
+  color: #081838;
+  border: 1.5px solid rgba(8, 24, 56, 0.12);
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 10px rgba(8, 24, 56, 0.03);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.workdesc-filter-pill:hover {
+  border-color: #c59b27;
+  color: #c59b27;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(197, 155, 39, 0.15);
+}
+
+.workdesc-filter-pill.active {
+  background: #081838;
+  color: #f3d068;
+  border-color: #081838;
+  box-shadow: 0 6px 20px rgba(8, 24, 56, 0.25);
+}
+
+@media (min-width: 992px) {
+  .workdesc-filter-wrapper {
+    flex-wrap: nowrap !important;
+    overflow-x: visible;
+    padding-bottom: 4px;
+    gap: 8px;
+    justify-content: center !important;
+  }
+
+  .workdesc-filter-pill {
+    padding: 8px 13px;
+    font-size: 0.82rem;
+    white-space: nowrap !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .workdesc-filter-wrapper {
+    gap: 12px;
+  }
+
+  .workdesc-filter-pill {
+    padding: 9px 18px;
+    font-size: 0.88rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Initiative Detail Cards (Equal Height Left & Right Columns)
+   -------------------------------------------------------------------------- */
+.workdesc-card-box {
+  background: #ffffff;
+  border: 1.5px solid rgba(197, 155, 39, 0.25);
+  border-radius: 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(8, 24, 56, 0.06);
+}
+
+.workdesc-card-box:hover {
+  box-shadow: 0 20px 50px rgba(8, 24, 56, 0.1) !important;
+  border-color: rgba(197, 155, 39, 0.45);
+  transform: translateY(-3px);
+}
+
+/* Image Container - Full Equal Height */
+.workdesc-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+.workdesc-feature-img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.workdesc-card-box:hover .workdesc-feature-img {
+  transform: scale(1.04);
+}
+
+.workdesc-img-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(8, 24, 56, 0.05) 0%, rgba(8, 24, 56, 0.1) 40%, rgba(8, 24, 56, 0.55) 100%);
+  z-index: 1;
+}
+
+.workdesc-img-tag-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(8, 24, 56, 0.88);
+  backdrop-filter: blur(8px);
+  color: #f3d068;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 1px solid rgba(243, 208, 104, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.workdesc-floating-impact {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(8, 24, 56, 0.2);
+  z-index: 2;
+}
+
+.impact-quote-text {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #081838;
+  line-height: 1.35;
+}
+
+/* Content Details */
+.workdesc-category-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #c59b27;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.workdesc-item-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 1.95rem;
+  color: #081838;
+  line-height: 1.25;
+}
+
+.workdesc-item-subtitle {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #c59b27 !important;
+}
+
+.workdesc-item-desc {
+  font-size: 0.96rem;
+  color: #3f4d63;
+  line-height: 1.65;
+}
+
+.workdesc-item-desc-extended {
+  font-size: 0.9rem;
+  color: #64748b !important;
+  line-height: 1.6;
+}
+
+/* 4 Feature Key Points */
+.workdesc-point-card {
+  background: #fdfbf7;
+  border: 1px solid rgba(197, 155, 39, 0.2);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+}
+
+.workdesc-point-card:hover {
+  background: #ffffff;
+  border-color: rgba(197, 155, 39, 0.45);
+  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.12);
+  transform: translateY(-2px);
+}
+
+.point-icon-box {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  background: #081838;
+  color: #f3d068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  border: 1px solid #c59b27;
+}
+
+.point-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #081838;
+}
+
+.point-desc {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* Bottom Section: Stat Grid & Action Row */
+.workdesc-bottom-section {
+  border-top: 1px solid rgba(197, 155, 39, 0.22) !important;
+  width: 100%;
+}
+
+.item-stat-box {
+  padding: 10px 8px;
+  background: rgba(197, 155, 39, 0.08);
+  border-radius: 14px;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-stat-box:hover {
+  background: rgba(197, 155, 39, 0.16);
+  border-color: rgba(197, 155, 39, 0.45);
+  transform: translateY(-2px);
+}
+
+.item-stat-number {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #081838;
+  line-height: 1.1;
+}
+
+.item-stat-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #5a687d;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
+/* Action Row & Buttons */
+.workdesc-action-row {
+  width: 100%;
+}
+
+.btn-workdesc-donate {
+  background: linear-gradient(135deg, #0c2048 0%, #081838 100%);
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1.5px solid #c59b27;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 18px rgba(8, 24, 56, 0.25);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-workdesc-donate:hover {
+  background: #c59b27;
+  color: #081838 !important;
+  border-color: #081838;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(197, 155, 39, 0.4);
+}
+
+.btn-workdesc-volunteer {
+  background: #ffffff;
+  color: #081838;
+  border: 1.5px solid #c59b27;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(197, 155, 39, 0.12);
+}
+
+.btn-workdesc-volunteer:hover {
+  background: #081838;
+  color: #f3d068;
+  border-color: #081838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(8, 24, 56, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   5. Spiritual Quote Card
+   -------------------------------------------------------------------------- */
+.workdesc-quote-card {
+  background: linear-gradient(135deg, #0c2048 0%, #081838 100%);
+  border: 2px solid #c59b27;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(8, 24, 56, 0.25);
+}
+
+.quote-icon {
+  font-size: 2.5rem;
+  color: #f3d068;
+  line-height: 1;
+}
+
+.quote-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.quote-author {
+  font-size: 0.85rem;
+  color: #f3d068;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Bottom Help / CTA Card (Flawlessly Responsive across All Devices)
+   -------------------------------------------------------------------------- */
+.workdesc-bottom-cta {
+  background: linear-gradient(135deg, #081838 0%, #0c2048 50%, #152e64 100%);
+  border: 1.5px solid rgba(197, 155, 39, 0.45);
+  border-radius: 28px !important;
+  box-shadow: 0 20px 50px rgba(8, 24, 56, 0.35);
+  position: relative;
+}
+
+.bottom-cta-glow {
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bottom-cta-badge {
+  background: rgba(197, 155, 39, 0.18);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  color: #f3d068;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bottom-cta-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.95rem;
+  line-height: 1.3;
+}
+
+.bottom-cta-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.bottom-cta-btn-group {
+  width: 100%;
+}
+
+.btn-bottom-cta-connect {
+  background: #ffffff;
+  color: #081838 !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 13px 24px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+.btn-bottom-cta-connect:hover {
+  background: #fdfbf7;
+  border-color: #c59b27;
+  color: #081838 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.btn-bottom-cta-donate {
+  background: #c59b27;
+  color: #081838 !important;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 13px 26px;
+  border-radius: 30px;
+  border: 2px solid #f3d068;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.35);
+  text-decoration: none;
+}
+
+.btn-bottom-cta-donate:hover {
+  background: #f3d068;
+  color: #081838 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(197, 155, 39, 0.55);
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Mobile & Tablet Optimizations (All Devices)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .ourworkdesc-page-section {
+    padding: 40px 0 60px 0;
+  }
+
+  .workdesc-main-title {
+    font-size: 1.95rem;
+  }
+
+  .workdesc-img-container {
+    height: 320px !important;
+    min-height: 320px !important;
+  }
+
+  .workdesc-feature-img {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  .workdesc-item-title {
+    font-size: 1.5rem;
+  }
+
+  .workdesc-card-box {
+    padding: 24px 18px !important;
+  }
+
+  .bottom-cta-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .workdesc-main-title {
+    font-size: 1.65rem;
+  }
+
+  .workdesc-lead-text {
+    font-size: 0.92rem;
+  }
+
+  .workdesc-img-container {
+    height: 250px !important;
+    min-height: 250px !important;
+  }
+
+  .workdesc-feature-img {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  .workdesc-item-title {
+    font-size: 1.35rem;
+  }
+
+  .workdesc-item-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .workdesc-item-desc {
+    font-size: 0.88rem;
+  }
+
+  .point-desc {
+    font-size: 0.74rem;
+  }
+
+  .quote-text {
+    font-size: 1.05rem;
+  }
+
+  .item-stat-box {
+    padding: 8px 4px;
+  }
+
+  .item-stat-number {
+    font-size: 1.02rem;
+  }
+
+  .item-stat-label {
+    font-size: 0.62rem;
+  }
+
+  .btn-workdesc-donate {
+    padding: 10px 16px;
+    font-size: 0.82rem;
+  }
+
+  /* 2nd Image Banner Mobile Overhaul */
+  .workdesc-bottom-cta {
+    padding: 28px 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .bottom-cta-title {
+    font-size: 1.38rem;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .bottom-cta-desc {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+
+  .bottom-cta-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  .bottom-cta-btn-group {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .btn-bottom-cta-connect,
+  .btn-bottom-cta-donate {
+    width: 100% !important;
+    padding: 12px 18px !important;
+    font-size: 0.88rem !important;
+    white-space: nowrap !important;
+    text-align: center;
+    justify-content: center;
+  }
+}

@@ -6,7 +6,6 @@ import logo from '../../assets/logo.png';
 const Navbar = () => {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // 'about' | null
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const headerRef = useRef(null);
 
@@ -23,11 +22,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Click Outside Validation: Close open dropdowns and mobile drawer when clicking outside header
+  // Click Outside: Close mobile drawer when clicking outside header
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (headerRef.current && !headerRef.current.contains(event.target)) {
-        setOpenDropdown(null);
         setIsNavCollapsed(true);
       }
     };
@@ -40,22 +38,13 @@ const Navbar = () => {
     };
   }, []);
 
-  // Standard Link Click Handler: Close dropdowns & collapse mobile menu
+  // Close mobile drawer on navigation
   const handleNavClick = () => {
-    setOpenDropdown(null);
     setIsNavCollapsed(true);
-  };
-
-  // Exclusive Dropdown Toggle Handler: Opening one dropdown automatically closes all other open dropdowns
-  const toggleDropdown = (e, dropdownName) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
   const toggleNavCollapse = () => {
     setIsNavCollapsed(!isNavCollapsed);
-    setOpenDropdown(null);
   };
 
   const currentPath = location.pathname;
@@ -83,15 +72,9 @@ const Navbar = () => {
           </div>
 
           <div className="topbar-right d-flex align-items-center gap-2 gap-sm-3 flex-nowrap">
-            <span className="darshan-badge d-none d-lg-inline-block">
+            <span className="darshan-badge">
               <i className="bi bi-clock-history me-1 text-warning"></i> Darshan: 6:00 AM - 9:00 PM
             </span>
-            <div className="topbar-socials d-flex align-items-center gap-2 flex-nowrap">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" title="Facebook" className="social-link"><i className="bi bi-facebook"></i></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" title="Instagram" className="social-link"><i className="bi bi-instagram"></i></a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" title="YouTube" className="social-link"><i className="bi bi-youtube"></i></a>
-              <a href="https://whatsapp.com" target="_blank" rel="noreferrer" title="WhatsApp" className="social-link"><i className="bi bi-whatsapp"></i></a>
-            </div>
           </div>
         </div>
       </div>
@@ -99,7 +82,7 @@ const Navbar = () => {
       {/* Main Responsive Navbar */}
       <nav className={`navbar navbar-expand-lg trust-navbar ${isScrolled ? 'navbar-sticky-scrolled' : ''}`}>
         <div className="container-fluid container-xl">
-          {/* Brand Logo Only */}
+          {/* Brand Logo */}
           <Link className="navbar-brand me-lg-4 p-0 d-inline-flex align-items-center" to="/" onClick={handleNavClick}>
             <img src={logo} alt="Sri Shirdi Sai Charitable Trust Logo" className="trust-logo-img" />
           </Link>
@@ -121,43 +104,29 @@ const Navbar = () => {
           {/* Nav Links & Action Button */}
           <div className={`collapse navbar-collapse ${!isNavCollapsed ? 'show' : ''}`} id="trustNavbarContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 trust-nav-links">
+              {/* Home */}
               <li className="nav-item">
                 <Link
                   className={`nav-link trust-nav-item ${currentPath === '/' ? 'active' : ''}`}
                   to="/"
                   onClick={handleNavClick}
                 >
-                  
                   Home
                 </Link>
               </li>
 
-              {/* Dropdown: About Us */}
-              <li className="nav-item dropdown">
-                <a
-                  className={`nav-link trust-nav-item ${currentPath.startsWith('/about') || currentPath === '/trustees' ? 'active' : ''} ${openDropdown === 'about' ? 'show' : ''}`}
-                  href="/about"
-                  role="button"
-                  aria-expanded={openDropdown === 'about'}
-                  onClick={(e) => toggleDropdown(e, 'about')}
+              {/* About Us (Direct Link) */}
+              <li className="nav-item">
+                <Link
+                  className={`nav-link trust-nav-item ${currentPath === '/about' ? 'active' : ''}`}
+                  to="/about"
+                  onClick={handleNavClick}
                 >
-                  About Us <i className={`bi bi-chevron-down ms-1 dropdown-chevron ${openDropdown === 'about' ? 'rotate' : ''}`}></i>
-                </a>
-                <ul className={`dropdown-menu trust-dropdown-menu ${openDropdown === 'about' ? 'show' : ''}`}>
-                  <li>
-                    <Link className="dropdown-item" to="/about" onClick={handleNavClick}>
-                      <i className="bi bi-info-circle me-2 text-warning"></i>Our Trust History
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/ourteam" onClick={handleNavClick}>
-                      <i className="bi bi-people me-2 text-warning"></i>Our Team
-                    </Link>
-                  </li>
-                </ul>
+                  About Us
+                </Link>
               </li>
 
-              {/* Our Work (Direct Link - No Dropdown) */}
+              {/* Our Work */}
               <li className="nav-item">
                 <Link
                   className={`nav-link trust-nav-item ${currentPath === '/our-work' ? 'active' : ''}`}
@@ -168,16 +137,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link
-                  className={`nav-link trust-nav-item ${currentPath === '/event' ? 'active' : ''}`}
-                  to="/event"
-                  onClick={handleNavClick}
-                >
-                  Event
-                </Link>
-              </li>
-
+              {/* News */}
               <li className="nav-item">
                 <Link
                   className={`nav-link trust-nav-item ${currentPath === '/news' ? 'active' : ''}`}
@@ -188,6 +148,18 @@ const Navbar = () => {
                 </Link>
               </li>
 
+              {/* Our Team (Placed in between News and Gallery) */}
+              <li className="nav-item">
+                <Link
+                  className={`nav-link trust-nav-item ${currentPath === '/ourteam' ? 'active' : ''}`}
+                  to="/ourteam"
+                  onClick={handleNavClick}
+                >
+                  Our Team
+                </Link>
+              </li>
+
+              {/* Gallery */}
               <li className="nav-item">
                 <Link
                   className={`nav-link trust-nav-item ${currentPath === '/gallery' ? 'active' : ''}`}
@@ -198,13 +170,14 @@ const Navbar = () => {
                 </Link>
               </li>
 
+              {/* Contact Us */}
               <li className="nav-item">
                 <Link
                   className={`nav-link trust-nav-item ${currentPath === '/contact' ? 'active' : ''}`}
                   to="/contact"
                   onClick={handleNavClick}
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>

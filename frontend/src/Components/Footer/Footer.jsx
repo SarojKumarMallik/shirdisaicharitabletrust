@@ -32,9 +32,9 @@ const Footer = () => {
               <li><Link to="/about"><i className="bi bi-chevron-right"></i> About Us</Link></li>
               <li><Link to="/ourteam"><i className="bi bi-chevron-right"></i> Our Team</Link></li>
               <li><Link to="/our-work"><i className="bi bi-chevron-right"></i> Our Work</Link></li>
-              <li><Link to="/event"><i className="bi bi-chevron-right"></i> Events</Link></li>
-              <li><Link to="/news"><i className="bi bi-chevron-right"></i> Latest News</Link></li>
-              <li><Link to="/gallery"><i className="bi bi-chevron-right"></i> Photo Gallery</Link></li>
+            
+              <li><Link to="/news"><i className="bi bi-chevron-right"></i>  News</Link></li>
+              <li><Link to="/gallery"><i className="bi bi-chevron-right"></i>  Gallery</Link></li>
               <li><Link to="/contact"><i className="bi bi-chevron-right"></i> Contact Us</Link></li>
             </ul>
           </div>

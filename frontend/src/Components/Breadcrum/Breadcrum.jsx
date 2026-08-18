@@ -15,8 +15,6 @@ const ROUTE_CONFIG = {
   '/ourteam': {
     title: 'Our Team & Leadership',
     subtitle: 'Meet the dedicated trustees and compassionate minds behind our charitable trust.',
-    parent: 'About Us',
-    parentPath: '/about',
     bgImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920',
   },
   '/our-work': {
@@ -30,12 +28,12 @@ const ROUTE_CONFIG = {
     bgImage: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1920',
   },
   '/news': {
-    title: 'News & Announcements',
+    title: 'News',
     subtitle: 'Stay updated with our latest press releases, stories, and trust updates.',
     bgImage: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1920',
   },
   '/gallery': {
-    title: 'Photo & Video Gallery',
+    title: 'Gallery',
     subtitle: 'Glimpses of divine darshan, trust initiatives, and community service.',
     bgImage: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=1920',
   },

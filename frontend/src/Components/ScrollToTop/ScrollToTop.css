@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Scroll to Top Floating Button Stylesheet
+   ========================================================================== */
+
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #081838 0%, #0d2352 100%);
+  border: 2px solid #c59b27;
+  color: #f3d068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1040;
+ 
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.85);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+  outline: none;
+}
+
+.scroll-to-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-btn-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.scroll-icon {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f3d068;
+  transition: transform 0.25s ease, color 0.25s ease;
+  line-height: 1;
+}
+
+/* Hover & Active States */
+.scroll-to-top-btn:hover {
+  background: linear-gradient(135deg, #c57e1a 0%, #d48e28 100%);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.06);
+  
+}
+
+.scroll-to-top-btn:hover .scroll-icon {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.scroll-to-top-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Subtle Pulse Glow Ring */
+.scroll-pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(197, 155, 39, 0.4);
+  pointer-events: none;
+  animation: scrollPulse 2.5s infinite;
+  opacity: 0;
+}
+
+.scroll-to-top-btn.visible .scroll-pulse-ring {
+  opacity: 1;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile View Responsive Placement
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  .scroll-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .scroll-icon {
+    font-size: 1.1rem;
+  }
+}

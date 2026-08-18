@@ -8,6 +8,8 @@ import Cta from '../Components/Cta/Cta'
 import Whychoose from '../Components/Whychoose/Whychoose'
 import Journey from '../Components/Journey/Journey'
 import Ourwork from '../Components/Ourwork/Ourwork'
+import Testimonial from '../Components/Testimonial/Testimonial'
+
 
 const About = () => {
   return (
@@ -16,6 +18,7 @@ const About = () => {
     <Abouthero/>
     <Founder/>
     <Journey/>
+    
     <Whychoose/>
     <Ourwork/>
     <Cta/>

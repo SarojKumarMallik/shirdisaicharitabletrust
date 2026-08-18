@@ -1,0 +1,617 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Photo Gallery Stylesheet
+   - 4-Column All Albums Grid with Floating Icon Badges
+   - 2-Column Selected Album View (Left Photos Grid, Right Other Albums Sidebar)
+   - Full Single Image Preview Modal
+   - Bottom Story Banner
+   ========================================================================== */
+
+.gallery-section {
+  background-color: #fdfbf7;
+  padding: 40px 0 80px 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient Background Glows */
+.gallery-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(140px);
+  z-index: 1;
+  opacity: 0.15;
+}
+
+.gallery-glow-1 {
+  top: -100px;
+  right: -100px;
+  background: #c59b27;
+}
+
+.gallery-glow-2 {
+  bottom: 200px;
+  left: -150px;
+  background: #081838;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   0. Gallery Section Header & Heading
+   -------------------------------------------------------------------------- */
+.gallery-header-box {
+  max-width: 1200px;
+}
+
+.gallery-badge-chip {
+  background: rgba(197, 155, 39, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  color: #081838;
+}
+
+.gallery-main-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #081838;
+  letter-spacing: -0.5px;
+}
+
+.gallery-title-separator {
+  width: 60px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #c57e1a, #f3d068);
+  border-radius: 4px;
+}
+
+.gallery-main-subtitle {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #5a6578 !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. All-Albums Grid & Floating Circular Badges
+   -------------------------------------------------------------------------- */
+.gallery-album-card {
+  border: 1px solid rgba(8, 24, 56, 0.07);
+  border-radius: 20px !important;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(8, 24, 56, 0.09) !important;
+  border-color: rgba(197, 126, 26, 0.3);
+}
+
+/* Cover Image */
+.album-cover-wrapper {
+  height: 205px;
+  background-color: #f7f5f0;
+}
+
+.album-cover-img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-album-card:hover .album-cover-img {
+  transform: scale(1.05);
+}
+
+.album-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 24, 56, 0.7) 0%,
+    rgba(8, 24, 56, 0.2) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Floating Circular Badge on Image Bottom-Left */
+.album-icon-badge {
+  bottom: 12px;
+  left: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(8, 24, 56, 0.78);
+  backdrop-filter: blur(6px);
+  border: 2px solid #f3d068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3d068;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.gallery-album-card:hover .album-icon-badge {
+  background: #c57e1a;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* Album Footer Info */
+.album-info-footer {
+  background: #ffffff;
+  border-top: 1px solid rgba(8, 24, 56, 0.04);
+}
+
+.album-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a202c;
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+
+.gallery-album-card:hover .album-card-title {
+  color: #c57e1a;
+}
+
+.album-photo-count {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.album-arrow-box {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-arrow-icon {
+  color: #c57e1a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+
+.gallery-album-card:hover .album-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   2. In-Page Selected Album View (Left Grid & Right Sidebar)
+   -------------------------------------------------------------------------- */
+.animate-fade-in {
+  animation: fadeInGrid 0.35s ease-out;
+}
+
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-back-albums {
+  border-color: rgba(8, 24, 56, 0.25);
+  font-size: 0.88rem;
+  transition: all 0.25s ease;
+}
+
+.btn-back-albums:hover {
+  background: #081838;
+  color: #f3d068;
+  border-color: #081838;
+  transform: translateX(-3px);
+}
+
+.album-header-banner {
+  background: linear-gradient(135deg, #fdf8ee 0%, #fffdf9 100%);
+  border: 1.5px solid rgba(197, 155, 39, 0.25);
+}
+
+.album-detail-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.65rem;
+  color: #081838;
+}
+
+.album-detail-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Photo Cards in the Grid */
+.in-page-photo-card {
+  border: 1px solid rgba(8, 24, 56, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.in-page-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(8, 24, 56, 0.1) !important;
+  border-color: rgba(197, 126, 26, 0.35);
+}
+
+.photo-frame-wrapper {
+  height: 180px;
+  background: #f1f3f5;
+}
+
+.in-page-grid-img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.in-page-photo-card:hover .in-page-grid-img {
+  transform: scale(1.06);
+}
+
+.photo-zoom-icon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(8, 24, 56, 0.8);
+  color: #f3d068;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  border: 1px solid rgba(243, 208, 104, 0.3);
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+.in-page-photo-card:hover .photo-zoom-icon-badge {
+  background: #c57e1a;
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.1);
+}
+
+.photo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 24, 56, 0.8) 0%,
+    rgba(8, 24, 56, 0.2) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.in-page-photo-card:hover .photo-card-overlay {
+  opacity: 1;
+}
+
+.photo-caption-footer {
+  background: #ffffff;
+  border-top: 1px solid rgba(8, 24, 56, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   3. Right Sidebar (Explore Other Photo Albums)
+   -------------------------------------------------------------------------- */
+.other-albums-sidebar {
+  border: 1px solid rgba(8, 24, 56, 0.08);
+  top: 90px;
+}
+
+.other-album-item {
+  background: #fdfbf7;
+  border: 1px solid rgba(8, 24, 56, 0.05);
+  transition: all 0.25s ease;
+}
+
+.other-album-item:hover {
+  background: #fef5e7;
+  border-color: rgba(197, 126, 26, 0.3);
+  transform: translateX(4px);
+}
+
+.other-album-thumb {
+  width: 48px;
+  height: 48px;
+  background: #e2e8f0;
+}
+
+.other-album-title {
+  color: #1a202c;
+  line-height: 1.3;
+}
+
+.other-album-item:hover .other-album-title {
+  color: #c57e1a;
+}
+
+/* --------------------------------------------------------------------------
+   4. Full Single Image Lightbox Modal
+   -------------------------------------------------------------------------- */
+.gallery-single-photo-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 8, 20, 0.94);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999 !important;
+  padding: 24px 16px;
+  overflow: hidden;
+}
+
+.gallery-single-photo-modal {
+  background: #081838;
+  max-width: 880px;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #c59b27;
+  border-radius: 20px !important;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  animation: photoModalIn 0.25s ease-out;
+}
+
+@keyframes photoModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.single-photo-header {
+  background: linear-gradient(135deg, #0c2048 0%, #081838 100%);
+  border-bottom: 1.5px solid rgba(197, 155, 39, 0.3);
+  padding: 12px 18px !important;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.single-photo-title-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.single-photo-caption-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f8fafc;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-modal-close-custom {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.btn-modal-close-custom:hover {
+  background: #c57e1a;
+  border-color: #f3d068;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.single-photo-stage {
+  background: #02060e;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-photo-full-img {
+  max-height: calc(90vh - 80px);
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   5. Bottom Story Banner
+   -------------------------------------------------------------------------- */
+.gallery-story-banner {
+  background: #fdf5e7;
+  border: 1px solid rgba(197, 126, 26, 0.2);
+}
+
+.story-banner-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #081838;
+}
+
+.story-banner-subtitle {
+  max-width: 650px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .album-cover-wrapper {
+    height: 180px;
+  }
+
+  .photo-frame-wrapper {
+    height: 190px;
+  }
+
+  .single-photo-stage {
+    min-height: 280px;
+    max-height: 380px;
+  }
+
+  .story-banner-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gallery-section {
+    padding: 25px 0 60px 0;
+  }
+
+  .gallery-single-photo-backdrop {
+    padding: 12px 10px;
+  }
+
+  .gallery-single-photo-modal {
+    max-height: 85vh;
+    border-radius: 16px !important;
+  }
+
+  .single-photo-header {
+    padding: 10px 14px !important;
+    gap: 8px;
+  }
+
+  .single-photo-caption-text {
+    font-size: 0.82rem;
+  }
+
+  .btn-modal-close-custom {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 0.75rem;
+  }
+
+  .single-photo-stage {
+    padding: 8px 10px;
+    min-height: 200px;
+  }
+
+  .single-photo-full-img {
+    max-height: calc(85vh - 70px);
+    border-radius: 8px;
+  }
+
+  .album-top-nav-bar {
+    gap: 6px;
+  }
+
+  .btn-back-albums {
+    font-size: 0.78rem;
+    padding: 6px 12px !important;
+  }
+
+  .album-count-badge {
+    font-size: 0.75rem;
+    padding: 6px 10px !important;
+  }
+
+  .album-cover-wrapper {
+    height: 125px;
+  }
+
+  .album-icon-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .album-info-footer {
+    padding: 8px 10px !important;
+  }
+
+  .album-card-title {
+    font-size: 0.82rem;
+    margin-bottom: 2px !important;
+  }
+
+  .album-photo-count {
+    font-size: 0.72rem;
+  }
+
+  .photo-frame-wrapper {
+    height: 120px;
+  }
+
+  .photo-caption-footer {
+    padding: 6px 8px !important;
+  }
+
+  .photo-caption-footer p {
+    font-size: 0.75rem !important;
+  }
+
+  .gallery-main-title {
+    font-size: 1.55rem;
+  }
+
+  .gallery-main-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .album-detail-title {
+    font-size: 1.25rem;
+  }
+
+  .story-banner-title {
+    font-size: 1.15rem;
+  }
+}

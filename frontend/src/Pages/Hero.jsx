@@ -7,6 +7,7 @@ import Faq from '../Components/Faq/Faq'
 import Whychoose from '../Components/Whychoose/Whychoose'
 import Cta from '../Components/Cta/Cta'
 import Ourwork from '../Components/Ourwork/Ourwork'
+import Testimonial from '../Components/Testimonial/Testimonial'
 
 const Hero = () => {
   return (
@@ -16,7 +17,9 @@ const Hero = () => {
     <Heroabout/>
     <Herocounter/>
     <Ourwork/>
+    <Testimonial/>
     <Whychoose/>
+    
     <Cta/>
     <Faq/>
     </>
