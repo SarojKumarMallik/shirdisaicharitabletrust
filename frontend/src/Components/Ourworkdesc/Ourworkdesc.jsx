@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Ourworkdesc.css';
-
+import relief from '../../assets/relief.png'
 const INITIATIVES_DATA = [
   {
     id: 'relief',
@@ -42,7 +42,7 @@ const INITIATIVES_DATA = [
       { number: '3,200+', label: 'Ration Kits Distributed' },
       { number: '24/7', label: 'Emergency Support' }
     ],
-    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800',
+    image: relief,
     impactHighlight: 'Over 50,000 wholesome meals served across hospital campuses and rural clusters.',
     ctaText: 'Support Relief Drives'
   },

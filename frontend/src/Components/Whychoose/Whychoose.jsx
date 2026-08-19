@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Whychoose.css';
+import aid from '../../assets/aid.png'
 
 const Whychoose = () => {
   return (
@@ -15,46 +16,18 @@ const Whychoose = () => {
               {/* Main Background Image */}
               <div className="whychoose-main-img-card">
                 <img
-                  src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800"
+                  src={aid}
                   alt="Child receiving food and toy support"
                   className="whychoose-main-img"
                 />
               </div>
 
-              {/* Top-Left Floating Active Volunteers Badge */}
-              <div className="whychoose-volunteer-card">
-                <div className="volunteer-count-wrap">
-                  <h4 className="volunteer-count">3,500+</h4>
-                  <span className="volunteer-label">Active Volunteers</span>
-                </div>
-                <div className="volunteer-avatar-group d-flex mt-2">
-                  <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100"
-                    alt="Volunteer 1"
-                    className="avatar-img"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100"
-                    alt="Volunteer 2"
-                    className="avatar-img"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100"
-                    alt="Volunteer 3"
-                    className="avatar-img"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=100"
-                    alt="Volunteer 4"
-                    className="avatar-img"
-                  />
-                </div>
-              </div>
+            
 
               {/* Bottom-Right Overlapping Sub Image */}
               <div className="whychoose-sub-img-card">
                 <img
-                  src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=600"
+                  src={aid}
                   alt="Child receiving community aid"
                   className="whychoose-sub-img"
                 />

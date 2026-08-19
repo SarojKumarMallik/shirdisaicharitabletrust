@@ -69,13 +69,13 @@
 .ourwork-img-container {
   position: relative;
   overflow: hidden;
-  height: 220px;
+  height: 250px;
 }
 
 .ourwork-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   display: block;
   transition: transform 0.5s ease;
 }
@@ -167,7 +167,7 @@
   border-top: 1.5px solid rgba(226, 232, 240, 0.8);
   border-bottom: 1.5px solid rgba(226, 232, 240, 0.8);
   box-shadow: 0 6px 20px rgba(8, 24, 56, 0.04);
-  max-width: 850px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

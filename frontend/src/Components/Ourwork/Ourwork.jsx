@@ -1,6 +1,11 @@
 import React from 'react';
 import './Ourwork.css';
-
+import relief from '../../assets/relief.png'
+import planting from '../../assets/planting.png'
+import social from '../../assets/social.png'
+import health from '../../assets/health.png'
+import education from '../../assets/education.png'
+import women from '../../assets/women.png'
 const WORK_INITIATIVES = [
   {
     id: 1,
@@ -9,7 +14,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-heart-fill',
     description:
       'We provide support to people and families facing difficult situations, helping them with essential needs and emergency assistance whenever possible.',
-    image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=700',
+    image: relief,
   },
   {
     id: 2,
@@ -18,7 +23,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-tree-fill',
     description:
       'We promote tree plantation and environmental awareness to create a greener, healthier, and more sustainable future for our communities.',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=700',
+    image: planting,
   },
   {
     id: 3,
@@ -27,7 +32,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-people-fill',
     description:
       'We take part in community-focused activities that encourage kindness, support vulnerable people, and contribute to the overall well-being of society.',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=700',
+    image: social
   },
   {
     id: 4,
@@ -36,7 +41,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-heart-pulse-fill',
     description:
       'We organize healthcare initiatives and medical support programs to help people access basic health services and encourage better health awareness.',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=700',
+    image: health
   },
   {
     id: 5,
@@ -45,7 +50,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-mortarboard-fill',
     description:
       'We support students from underserved backgrounds by helping create better opportunities for learning, education, and personal development.',
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=700',
+    image: education,
   },
   {
     id: 6,
@@ -54,7 +59,7 @@ const WORK_INITIATIVES = [
     icon: 'bi-award-fill',
     description:
       'We support women through awareness, education, opportunities, and community initiatives that encourage confidence, independence, and self-reliance.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=700',
+    image: women,
   },
 ];
 
@@ -87,9 +92,7 @@ const Ourwork = () => {
                 <div className="ourwork-img-container">
                   <img src={item.image} alt={item.title} className="ourwork-card-img" />
                   <div className="ourwork-category-badge">{item.category}</div>
-                  <div className="ourwork-icon-float">
-                    <i className={`bi ${item.icon}`}></i>
-                  </div>
+                  
                 </div>
 
                 {/* Card Content Body */}

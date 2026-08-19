@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Herosection.css';
+import hero1 from '../../assets/hero1.png'
+import hero2 from '../../assets/hero2.png'
+import hero3 from '../../assets/hero3.png'
 
 const Herosection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,8 +20,8 @@ const Herosection = () => {
       btnPrimaryLink: '/donate',
       btnSecondaryText: 'WATCH VIDEO',
       btnSecondaryLink: '/gallery',
-      bgImage: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=1920',
-      cardImage: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&q=80&w=800',
+      bgImage: hero1,
+      cardImage: hero1,
     },
     {
       id: 2,
@@ -29,7 +32,7 @@ const Herosection = () => {
       btnPrimaryLink: '/donate',
       btnSecondaryText: 'EXPLORE OUR WORK',
       btnSecondaryLink: '/our-work',
-      bgImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=1920',
+      bgImage: hero3,
       cardImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800',
     },
     {
@@ -41,7 +44,7 @@ const Herosection = () => {
       btnPrimaryLink: '/donate',
       btnSecondaryText: 'GET IN TOUCH',
       btnSecondaryLink: '/contact',
-      bgImage: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=1920',
+      bgImage: hero2,
       cardImage: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=800',
     },
   ];
@@ -101,7 +104,7 @@ const Herosection = () => {
           ></div>
 
           {/* Dark Overlay */}
-          <div className="hero-overlay"></div>
+          {/* <div className="hero-overlay"></div> */}
 
           {/* Container Content */}
           <div className="container position-relative z-3 my-auto py-4 py-lg-5">
@@ -136,7 +139,7 @@ const Herosection = () => {
               </div>
 
               {/* Right Column: Devotional Imagery Frame (Desktop Only) */}
-              <div className="col-lg-5 text-center hero-content-right d-none d-lg-block">
+              {/* <div className="col-lg-5 text-center hero-content-right d-none d-lg-block">
                 <div className="hero-image-frame">
                   <div className="hero-deity-card">
                     <img src={slide.cardImage} alt={slide.tag} />
@@ -145,7 +148,7 @@ const Herosection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
