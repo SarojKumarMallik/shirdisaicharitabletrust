@@ -1,6 +1,6 @@
 import React from 'react';
 import './Founder.css';
-
+import founder from '../../assets/founder.png'
 const Founder = () => {
   return (
     <section className="founder-section py-5">
@@ -55,7 +55,7 @@ const Founder = () => {
               {/* Main Founder Image Card */}
               <div className="founder-img-card">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
+                  src={founder}
                   alt="Dr. Rudra Mohanty - Founder & Managing Director"
                   className="founder-main-img"
                 />
@@ -66,11 +66,6 @@ const Founder = () => {
                   <div className="exp-text">Years of Dedicated Service</div>
                 </div>
 
-                {/* Floating Faith Badge */}
-                <div className="founder-faith-badge">
-                  <i className="bi bi-flower1 me-1 text-warning"></i>
-                  <span>Shraddha & Saburi</span>
-                </div>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Ourteammember.css';
-
+import founder from '../../assets/founder.png'
 const teamMembersData = [
   {
     id: 1,
@@ -8,7 +8,7 @@ const teamMembersData = [
     role: 'Founder & Managing Trustee',
     category: 'Leadership',
     location: 'Bhubaneswar, Odisha',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600',
+    image: founder,
     email: 'rudra.mohanty@gmail.com',
     phone: '+919437000001',
     facebook: '#',
@@ -151,9 +151,7 @@ const Ourteammember = () => {
             <div key={member.id} className="col-12 col-md-6 col-lg-4 col-xl-3">
               <div className="team-card shadow-sm border-0 rounded-3 overflow-hidden bg-white d-flex flex-column h-100">
                 <div className="team-card-img-wrapper position-relative">
-                  <span className="team-card-badge position-absolute top-0 end-0 m-2 badge rounded-pill bg-warning text-dark font-weight-bold">
-                    {member.badge}
-                  </span>
+                  
                   <img
                     src={member.image}
                     alt={member.name}
