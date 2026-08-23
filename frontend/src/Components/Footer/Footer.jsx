@@ -56,7 +56,13 @@ const Footer = () => {
             <h5 className="footer-heading">Temple & Office</h5>
             <div className="footer-contact-item">
               <i className="bi bi-geo-alt-fill footer-contact-icon"></i>
-              <span>Basantpur, Kendrapara, Odisha</span>
+              <a
+                href="https://maps.app.goo.gl/1g4z2SS66WjsQUnX8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Basantpur, Kendrapara, Odisha
+              </a>
             </div>
             <div className="footer-contact-item">
               <i className="bi bi-telephone-fill"></i>
