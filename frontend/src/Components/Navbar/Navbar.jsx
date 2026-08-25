@@ -38,9 +38,12 @@ const Navbar = () => {
     };
   }, []);
 
+  const [isWorkDropdownOpen, setIsWorkDropdownOpen] = useState(false);
+
   // Close mobile drawer on navigation
   const handleNavClick = () => {
     setIsNavCollapsed(true);
+    setIsWorkDropdownOpen(false);
   };
 
   const toggleNavCollapse = () => {
@@ -132,15 +135,63 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              {/* Our Work */}
-              <li className="nav-item">
-                <Link
-                  className={`nav-link trust-nav-item ${currentPath === '/our-work' ? 'active' : ''}`}
-                  to="/our-work"
-                  onClick={handleNavClick}
-                >
-                  Our Work
-                </Link>
+              {/* Our Work Dropdown */}
+              <li
+                className="nav-item dropdown trust-dropdown-item"
+                onMouseEnter={() => setIsWorkDropdownOpen(true)}
+                onMouseLeave={() => setIsWorkDropdownOpen(false)}
+              >
+                <div className="d-flex align-items-center">
+                  <Link
+                    className={`nav-link trust-nav-item pe-1 ${currentPath === '/our-work' ? 'active' : ''}`}
+                    to="/our-work"
+                    onClick={handleNavClick}
+                  >
+                    Our Work
+                  </Link>
+                  <button
+                    type="button"
+                    className="btn p-0 border-0 text-secondary dropdown-toggle-btn me-2"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsWorkDropdownOpen(!isWorkDropdownOpen);
+                    }}
+                    aria-expanded={isWorkDropdownOpen}
+                    aria-label="Toggle Our Work menu"
+                  >
+                    <i className={`bi bi-chevron-down dropdown-chevron ${isWorkDropdownOpen ? 'rotate' : ''}`}></i>
+                  </button>
+                </div>
+
+                <ul className={`dropdown-menu trust-dropdown-menu shadow ${isWorkDropdownOpen ? 'show' : ''}`}>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/our-work"
+                      onClick={handleNavClick}
+                    >
+                      <i className="bi bi-briefcase-fill me-2 text-warning"></i> Our Work
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/mission"
+                      onClick={handleNavClick}
+                    >
+                      <i className="bi bi-bullseye me-2 text-warning"></i> Our Mission
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/vision"
+                      onClick={handleNavClick}
+                    >
+                      <i className="bi bi-eye-fill me-2 text-warning"></i> Our Vision
+                    </Link>
+                  </li>
+                </ul>
               </li>
 
               {/* News */}
@@ -190,7 +241,7 @@ const Navbar = () => {
 
             {/* Right Action: Donate Button */}
             <div className="navbar-actions d-flex align-items-center gap-2 mt-3 mt-lg-0">
-              <Link to="/donate" className="btn btn-donate d-flex align-items-center gap-2" onClick={handleNavClick}>
+              <Link to="/contact" className="btn btn-donate d-flex align-items-center gap-2" onClick={handleNavClick}>
                 <i className="bi bi-heart-fill heart-icon"></i>
                 <span>Donate Now</span>
               </Link>

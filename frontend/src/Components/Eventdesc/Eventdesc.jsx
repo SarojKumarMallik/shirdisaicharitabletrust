@@ -284,7 +284,7 @@ const Eventdesc = () => {
                     <i className="bi bi-person-plus-fill me-2"></i>
                     <span>{featuredEvent.ctaText}</span>
                   </Link>
-                  <Link to="/donate" className="btn btn-spotlight-secondary">
+                  <Link to="/contact" className="btn btn-spotlight-secondary">
                     <i className="bi bi-heart-fill me-2 text-warning"></i>
                     <span>{featuredEvent.sponsorText}</span>
                   </Link>
@@ -387,7 +387,7 @@ const Eventdesc = () => {
                     <i className="bi bi-arrow-up-right ms-1"></i>
                   </Link>
 
-                  <Link to="/donate" className="btn btn-event-sponsor" title="Sponsor this event">
+                  <Link to="/contact" className="btn btn-event-sponsor" title="Sponsor this event">
                     <i className="bi bi-heart-fill me-1 text-danger"></i>
                     <span>Sponsor</span>
                   </Link>
@@ -477,7 +477,7 @@ const Eventdesc = () => {
                   <i className="bi bi-calendar-check-fill me-2 text-danger"></i>
                   <span>Plan an Event</span>
                 </Link>
-                <Link to="/donate" className="btn btn-bottom-cta-donate w-100 w-sm-auto">
+                <Link to="/contact" className="btn btn-bottom-cta-donate w-100 w-sm-auto">
                   <i className="bi bi-heart-fill me-2 text-danger"></i>
                   <span>Sponsor Seva</span>
                 </Link>
@@ -551,7 +551,7 @@ const Eventdesc = () => {
               <Link to="/contact" className="btn btn-dark rounded-pill px-4 py-2 small">
                 <i className="bi bi-person-plus-fill me-1"></i> {selectedEventModal.ctaText}
               </Link>
-              <Link to="/donate" className="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2 small">
+              <Link to="/contact" className="btn btn-warning text-dark fw-bold rounded-pill px-4 py-2 small">
                 <i className="bi bi-heart-fill me-1 text-danger"></i> {selectedEventModal.sponsorText}
               </Link>
             </div>

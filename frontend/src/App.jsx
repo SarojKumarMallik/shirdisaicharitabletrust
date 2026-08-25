@@ -15,6 +15,8 @@ import Ourwork from './Pages/Ourwork';
 import Event from './Pages/Event';
 import News from './Pages/News';
 import Gallery from './Pages/Gallery';
+import Mission from './Pages/Mission';
+import Vision from './Pages/Vision';
 
 const App = () => {
   return (
@@ -39,6 +41,8 @@ const App = () => {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/donate" element={<Hero />} />
+            <Route path="/mission" element={<Mission />} />
+            <Route path="/vision" element={<Vision />} />
           </Routes>
         </main>
 

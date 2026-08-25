@@ -1,66 +1,73 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonial.css';
+import male from '../../assets/man.png';
+import female from '../../assets/woman.png';
 
 const testimonialsData = [
   {
     id: 1,
     name: "Soumya Ranjan Mohapatra",
-    location: "Cuttack, Odisha",
-    role: "Regular Donor & Volunteer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+    role: "Volunteer",
+    image: male,
     rating: 5,
     isOdia: true,
-    content: "ଶ୍ରୀ ଶିର୍ଡ଼ି ସାଇ ଟ୍ରଷ୍ଟର ଅନ୍ନଦାନ ସେବା ଏବଂ ଗରିବ ପିଲାଙ୍କ ପାଠପଢ଼ା ସହାୟତା ସତରେ ଅତୁଳନୀୟ। ପ୍ରତି ଗୁରୁବାର ଦିନ ଶହ ଶହ ଅସହାୟ ଲୋକଙ୍କୁ ପ୍ରସାଦ ଓ ଖାଦ୍ୟ ବଣ୍ଟନ କରାଯାଉଛି। ବାବାଙ୍କ କୃପାରୁ ଏହି ପବିତ୍ର ସେବା ସାରା ଓଡ଼ିଶାରେ ଆଗକୁ ବଢ଼ୁ।"
+    content:
+      "ଶ୍ରୀ ଶିର୍ଡ଼ି ସାଇ ଚାରିଟେବଲ ଟ୍ରଷ୍ଟର ସେବା କାର୍ଯ୍ୟ ମୋତେ ବହୁତ ପ୍ରଭାବିତ କରିଛି। ଲୋକମାନଙ୍କୁ ସାହାଯ୍ୟ କରିବା, ସ୍ୱାସ୍ଥ୍ୟ ଶିବିର ଆୟୋଜନ କରିବା ଏବଂ ଶିକ୍ଷା କ୍ଷେତ୍ରରେ ସହଯୋଗ କରିବା ଟ୍ରଷ୍ଟର ଏକ ସୁନ୍ଦର ପ୍ରୟାସ। ଏଭଳି ମାନବ ସେବା ଆହୁରି ଆଗକୁ ବଢ଼ୁ।"
   },
   {
     id: 2,
     name: "Priyanka Priyadarshini Jena",
-    location: "Bhubaneswar, Odisha",
     role: "Education Supporter",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+    image:
+      female,
     rating: 5,
     isOdia: false,
-    content: "The Trust's dedication to educating underprivileged children across Odisha is remarkable. Providing school supplies, uniforms, and scholarships has transformed numerous young lives. Truly grateful to be a part of this mission."
+    content:
+      "What I appreciate most about the Trust is its focus on helping people in a practical and meaningful way. The educational activities and support for students show a genuine commitment to creating better opportunities for the community."
   },
   {
     id: 3,
     name: "Debasis Samantaray",
-    location: "Puri, Odisha",
-    role: "Community Seva Volunteer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+    role: "Community Volunteer",
+    image:
+      male,
     rating: 5,
     isOdia: true,
-    content: "ପୁରୀ ଏବଂ ଉପକୂଳବର୍ତ୍ତୀ ଅଞ୍ଚଳରେ ବନ୍ୟା ଓ ବାତ୍ୟା ସମୟରେ ଟ୍ରଷ୍ଟ ସଦସ୍ୟମାନଙ୍କ ୨୪ ଘଣ୍ଟିଆ ସେବା ଅତ୍ୟନ୍ତ ପ୍ରଶଂସନୀୟ। ନିଃସ୍ୱାର୍ଥପର ଭାବେ ପ୍ରଭାବିତ ପରିବାର ନିକଟରେ ଶୁଖିଲା ଖାଦ୍ୟ, ପାଣି ଓ ଔଷଧ ପହଞ୍ଚାଉଛନ୍ତି।"
+    content:
+      "ଟ୍ରଷ୍ଟ ସହିତ ଜଡିତ ହୋଇ ମୁଁ ଅନେକ ସେବା କାର୍ଯ୍ୟକୁ ନିକଟରୁ ଦେଖିଛି। ଆବଶ୍ୟକତା ଥିବା ଲୋକଙ୍କୁ ସହାୟତା, ସମୁଦାୟ କାର୍ଯ୍ୟକ୍ରମ ଏବଂ ବିଭିନ୍ନ ଚାରିଟେବଲ ପ୍ରୟାସରେ ଟ୍ରଷ୍ଟର ଭୂମିକା ପ୍ରଶଂସନୀୟ।"
   },
   {
     id: 4,
     name: "Dr. Minati Tripathy",
-    location: "Berhampur, Odisha",
-    role: "Healthcare Volunteer Doctor",
-    image: "https://images.unsplash.com/photo-1594824813589-322123d53f53?auto=format&fit=crop&q=80&w=200",
+    role: "Healthcare Volunteer",
+    image:
+      female,
     rating: 5,
     isOdia: false,
-    content: "Volunteering with the medical team during free health camps in Ganjam has been deeply fulfilling. Free consultations, diagnostic tests, and medicines are distributed to rural families with genuine care and compassion."
+    content:
+      "The health and eye-care initiatives are a meaningful way of bringing basic healthcare support closer to the community. I truly value the Trust's efforts to make these services accessible to people who may otherwise find them difficult to reach."
   },
   {
     id: 5,
     name: "Bikash Kumar Sahoo",
-    location: "Rourkela, Odisha",
-    role: "Monthly Contributor",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200",
+    role: "Trust Supporter",
+    image:
+      male,
     rating: 5,
     isOdia: true,
-    content: "ଏହି ଟ୍ରଷ୍ଟର ସବୁଠାରୁ ବଡ଼ ବିଶେଷତ୍ୱ ହେଉଛି ସ୍ୱଚ୍ଛତା। ଆମ ଦାନ କିପରି ସିଧାସଳଖ ଅସହାୟ ଲୋକଙ୍କ ନିକଟରେ ପହଞ୍ଚୁଛି ତାହାର ସମ୍ପୂର୍ଣ୍ଣ ବିବରଣୀ ମିଳେ। ମାନବ ସେବା ହିଁ ମାଧବ ସେବା ବୋଲି ଏଠାରେ ଅନୁଭବ ହୁଏ।"
+    content:
+      "ଶ୍ରୀ ଶିର୍ଡ଼ି ସାଇ ଚାରିଟେବଲ ଟ୍ରଷ୍ଟର ସେବା ମନୋଭାବ ମୋତେ ସବୁଠାରୁ ଅଧିକ ଭଲ ଲାଗେ। ଶିକ୍ଷା, ସ୍ୱାସ୍ଥ୍ୟ ଏବଂ ଗରିବ ଓ ଆବଶ୍ୟକତା ଥିବା ଲୋକଙ୍କ ପାଇଁ ଟ୍ରଷ୍ଟର ପ୍ରୟାସ ନିଶ୍ଚିତ ଭାବେ ପ୍ରଶଂସାର ଯୋଗ୍ୟ।"
   },
   {
     id: 6,
     name: "Rashmita Pattanaik",
-    location: "Balasore, Odisha",
-    role: "Women Livelihood Partner",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200",
+    role: "Community Volunteer",
+    image:
+      female,
     rating: 5,
     isOdia: false,
-    content: "The skill development and sewing training initiatives have helped hundreds of rural women gain financial independence and live with dignity. Sincere appreciation to the Trust for this impactful social transformation."
+    content:
+      "Being associated with the Trust has been a meaningful experience for me. The way it brings together spiritual values with education, healthcare and community welfare makes its work feel genuinely connected to people's everyday needs."
   }
 ];
 
@@ -156,11 +163,8 @@ const Testimonial = () => {
                 <div>
                   <h5 className="author-name mb-1">{currentItem.name}</h5>
                   <div className="author-meta-line d-flex align-items-center gap-2 flex-wrap">
-                    <span className="author-location">
-                      <i className="bi bi-geo-alt-fill text-danger me-1"></i>
-                      {currentItem.location}
-                    </span>
-                    <span className="meta-separator">•</span>
+
+
                     <span className="author-role">{currentItem.role}</span>
                   </div>
                 </div>

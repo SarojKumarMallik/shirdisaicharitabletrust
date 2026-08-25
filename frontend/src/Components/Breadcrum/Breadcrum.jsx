@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Breadcrum.css';
 
+
 // Default spiritual background image
 const DEFAULT_BG_IMAGE = 'https://images.unsplash.com/photo-1609946782200-a6164a2cb457?auto=format&fit=crop&q=80&w=1920';
 
@@ -42,7 +43,7 @@ const ROUTE_CONFIG = {
     subtitle: 'Reach out to Sri Shirdi Sai Charitable Trust for support, inquiries, or visits.',
     bgImage: 'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920',
   },
-  '/donate': {
+  '/contact': {
     title: 'Donate & Support',
     subtitle: 'Your generous donations enable us to feed the needy and empower communities.',
     bgImage: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&q=80&w=1920',
@@ -188,12 +189,12 @@ const Breadcrum = ({ title, subtitle, parent, parentPath, items, bgImage }) => {
             {/* Main Left-Aligned H1 Title for SEO */}
             <h1 className="breadcrum-title text-start">{pageTitle}</h1>
 
-            
+
           </div>
         </div>
       </div>
 
-      
+
     </section>
   );
 };

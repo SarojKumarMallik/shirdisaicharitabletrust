@@ -1,5 +1,4 @@
 import React from 'react'
-import Heroabout from '../Components/Heroabout/Heroabout'
 import Breadcrum from '../Components/Breadcrum/Breadcrum'
 import Faq from '../Components/Faq/Faq'
 import Abouthero from '../Components/Abouthero/Abouthero'

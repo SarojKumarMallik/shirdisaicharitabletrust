@@ -16,18 +16,34 @@
 .heroabout-image-collage {
   position: relative;
   width: 100%;
-  max-width: 560px;
-  height: 540px;
+  max-width: 520px;
+  height: 100%;
+  min-height: 540px;
   margin: 0 auto;
 }
 
-/* Main Center Image */
+/* Top Right Overlapping Image (Starts at top 0) */
+.collage-img-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(8, 24, 56, 0.16);
+  border: 4px solid #ffffff;
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+
+/* Main Center/Left Image (Spans the middle) */
 .collage-img-main {
   position: absolute;
-  top: 45px;
-  left: 18%;
+  top: 15%;
+  left: 0;
   width: 60%;
-  height: 430px;
+  height: 68%;
   object-fit: cover;
   border-radius: 28px;
   box-shadow: 0 18px 40px rgba(8, 24, 56, 0.15);
@@ -36,33 +52,18 @@
   transition: transform 0.4s ease;
 }
 
-/* Top Right Overlapping Image */
-.collage-img-top-right {
-  position: absolute;
-  top: 0;
-  right: 0%;
-  width: 46%;
-  height: 230px;
-  object-fit: cover;
-  border-radius: 24px;
-  box-shadow: 0 14px 35px rgba(8, 24, 56, 0.16);
-  border: 4px solid #ffffff;
-  z-index: 3;
-  transition: transform 0.4s ease;
-}
-
-/* Bottom Left Overlapping Image */
+/* Bottom Right Overlapping Image (Ends at bottom 0) */
 .collage-img-bottom-left {
   position: absolute;
   bottom: 0;
-  left: 2%;
-  width: 46%;
-  height: 250px;
+  right: 4%;
+  width: 56%;
+  height: 42%;
   object-fit: cover;
   border-radius: 24px;
   box-shadow: 0 14px 35px rgba(8, 24, 56, 0.16);
   border: 4px solid #ffffff;
-  z-index: 3;
+  z-index: 4;
   transition: transform 0.4s ease;
 }
 

@@ -75,10 +75,10 @@ const Ourwork = () => {
               <span>Our Work</span>
             </div>
             <h2 className="ourwork-title mb-3">
-              Creating Change Through Service
+              CREATING CHANGE THROUGH SERVICE
             </h2>
             <p className="ourwork-subtitle">
-              At <strong>Sri Sri Shirdi Sai Charitable Trust</strong>, our work focuses on helping people, strengthening communities, and creating a better future. Through dedicated service and community initiatives, we work to support those who need care, guidance, and opportunities.
+              Supporting communities through healthcare, education, spiritual activities, and meaningful social welfare initiatives
             </p>
           </div>
         </div>
@@ -106,13 +106,7 @@ const Ourwork = () => {
           ))}
         </div>
 
-        {/* Simple Quotes Container */}
-        <div className="ourwork-simple-quote text-center my-4 py-4 px-3">
-          <p className="simple-quote-text mb-0">
-            <i className="bi bi-quote quote-mark me-2 text-warning"></i>
-            "Together, we believe that service can create hope, dignity, and lasting positive change."
-          </p>
-        </div>
+       
       </div>
     </section>
   );

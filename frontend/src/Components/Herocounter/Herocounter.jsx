@@ -3,19 +3,19 @@ import './Herocounter.css';
 
 const Herocounter = () => {
   const [counts, setCounts] = useState({
-    livesTouched: 0,
-    mealsServed: 0,
-    medicalCamps: 0,
-    studentsSupported: 0,
+    welfareInitiatives: 0,
+    educationPrograms: 0,
+    healthcareServices: 0,
+    communityRelief: 0,
   });
 
   const sectionRef = useRef(null);
 
   const targets = {
-    livesTouched: 10000,
-    mealsServed: 50000,
-    medicalCamps: 200,
-    studentsSupported: 500,
+    welfareInitiatives: 10,
+    educationPrograms: 8,
+    healthcareServices: 6,
+    communityRelief: 5,
   };
 
   // IntersectionObserver to trigger count-up when scrolling into view (up or down)
@@ -44,26 +44,26 @@ const Herocounter = () => {
   const startCounting = () => {
     // Reset to zero before starting count up
     setCounts({
-      livesTouched: 0,
-      mealsServed: 0,
-      medicalCamps: 0,
-      studentsSupported: 0,
+      welfareInitiatives: 0,
+      educationPrograms: 0,
+      healthcareServices: 0,
+      communityRelief: 0,
     });
 
-    const duration = 2000; // 2 Seconds count duration
-    const steps = 50;
+    const duration = 1200; // 1.2s count duration
+    const steps = 30;
     const intervalTime = duration / steps;
 
     let step = 0;
     const timer = setInterval(() => {
       step++;
-      const progress = step / steps;
+      const progress = Math.min(step / steps, 1);
 
       setCounts({
-        livesTouched: Math.floor(targets.livesTouched * progress),
-        mealsServed: Math.floor(targets.mealsServed * progress),
-        medicalCamps: Math.floor(targets.medicalCamps * progress),
-        studentsSupported: Math.floor(targets.studentsSupported * progress),
+        welfareInitiatives: Math.floor(targets.welfareInitiatives * progress),
+        educationPrograms: Math.floor(targets.educationPrograms * progress),
+        healthcareServices: Math.floor(targets.healthcareServices * progress),
+        communityRelief: Math.floor(targets.communityRelief * progress),
       });
 
       if (step >= steps) {
@@ -73,87 +73,28 @@ const Herocounter = () => {
     }, intervalTime);
   };
 
-  const featureCards = [
-    {
-      id: 1,
-      title: 'ANNADANAM SEVA',
-      desc: 'Providing free meals to the needy and spreading happiness in society.',
-      icon: 'bi-heart-pulse-fill',
-    },
-    {
-      id: 2,
-      title: 'EDUCATION SUPPORT',
-      desc: 'Supporting students with education, books, and brightening their future.',
-      icon: 'bi-mortarboard-fill',
-    },
-    {
-      id: 3,
-      title: 'HEALTHCARE SEVA',
-      desc: 'Organizing medical camps and providing healthcare support to the underprivileged.',
-      icon: 'bi-hospital-fill',
-    },
-    {
-      id: 4,
-      title: 'COMMUNITY WELFARE',
-      desc: 'Working for the upliftment of society through various charitable activities.',
-      icon: 'bi-people-fill',
-    },
-  ];
-
   return (
     <section ref={sectionRef} className="herocounter-section">
       <div className="container">
-       
-
-        {/* Bottom Row: Dark Navy & Gold Counter Bar (2 per row on Mobile col-6) */}
+        {/* Dark Navy & Gold Counter Bar (2 per row on Mobile col-6) */}
         <div className="counter-bar-wrapper">
           <div className="row align-items-center g-2 g-md-0">
-            {/* Stat 1: Lives Touched */}
+            {/* Stat 1: Welfare Initiatives */}
             <div className="col-6 col-lg-3 counter-col">
               <div className="counter-item">
                 <div className="counter-icon-circle">
-                  <i className="bi bi-people-fill"></i>
+                  <i className="bi bi-heart-fill"></i>
                 </div>
                 <div>
                   <div className="counter-number">
-                    {counts.livesTouched.toLocaleString()}+
+                    {counts.welfareInitiatives}+
                   </div>
-                  <div className="counter-label">Lives Touched</div>
+                  <div className="counter-label">Welfare Initiatives</div>
                 </div>
               </div>
             </div>
 
-            {/* Stat 2: Meals Served */}
-            <div className="col-6 col-lg-3 counter-col">
-              <div className="counter-item">
-                <div className="counter-icon-circle">
-                  <i className="bi bi-heart-pulse-fill"></i>
-                </div>
-                <div>
-                  <div className="counter-number">
-                    {counts.mealsServed.toLocaleString()}+
-                  </div>
-                  <div className="counter-label">Meals Served</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Stat 3: Medical Camps */}
-            <div className="col-6 col-lg-3 counter-col">
-              <div className="counter-item">
-                <div className="counter-icon-circle">
-                  <i className="bi bi-hospital-fill"></i>
-                </div>
-                <div>
-                  <div className="counter-number">
-                    {counts.medicalCamps.toLocaleString()}+
-                  </div>
-                  <div className="counter-label">Medical Camps</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Stat 4: Students Supported */}
+            {/* Stat 2: Education & Support Programs */}
             <div className="col-6 col-lg-3 counter-col">
               <div className="counter-item">
                 <div className="counter-icon-circle">
@@ -161,9 +102,39 @@ const Herocounter = () => {
                 </div>
                 <div>
                   <div className="counter-number">
-                    {counts.studentsSupported.toLocaleString()}+
+                    {counts.educationPrograms}+
                   </div>
-                  <div className="counter-label">Students Supported</div>
+                  <div className="counter-label">Education &amp; Support Programs</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stat 3: Healthcare & Medical Services */}
+            <div className="col-6 col-lg-3 counter-col">
+              <div className="counter-item">
+                <div className="counter-icon-circle">
+                  <i className="bi bi-hospital-fill"></i>
+                </div>
+                <div>
+                  <div className="counter-number">
+                    {counts.healthcareServices}+
+                  </div>
+                  <div className="counter-label">Healthcare &amp; Medical Services</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Stat 4: Community Relief Activities */}
+            <div className="col-6 col-lg-3 counter-col">
+              <div className="counter-item">
+                <div className="counter-icon-circle">
+                  <i className="bi bi-people-fill"></i>
+                </div>
+                <div>
+                  <div className="counter-number">
+                    {counts.communityRelief}+
+                  </div>
+                  <div className="counter-label">Community Relief Activities</div>
                 </div>
               </div>
             </div>

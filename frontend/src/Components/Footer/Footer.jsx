@@ -14,7 +14,7 @@ const Footer = () => {
               <img src={logo} alt="Sri Sri Shirdi Sai Charitable Trust Logo" className="footer-brand-logo" />
             </Link>
             <p className="footer-desc">
-              Sri Sri Shirdi Sai Charitable Trust is dedicated to serving humanity in Basantpur, Kendrapara, Odisha through free food distribution (Annadanam), education support, and medical relief.
+             Sri Sri Shirdi Sai Charitable Trust is committed to serving humanity with compassion and devotion. Through free food distribution (Annadanam), rural healthcare, educational support, and spiritual initiatives, we strive to bring hope, dignity, and positive change to communities in Basantpur, Kendrapara, Odisha.
             </p>
             <div className="footer-socials">
               <a href="https://facebook.com" target="_blank" rel="noreferrer" className="footer-social-link" title="Facebook"><i className="bi bi-facebook"></i></a>
@@ -32,9 +32,10 @@ const Footer = () => {
               <li><Link to="/about"><i className="bi bi-chevron-right"></i> About Us</Link></li>
               <li><Link to="/ourteam"><i className="bi bi-chevron-right"></i> Our Team</Link></li>
               <li><Link to="/our-work"><i className="bi bi-chevron-right"></i> Our Work</Link></li>
-            
-              <li><Link to="/news"><i className="bi bi-chevron-right"></i>  News</Link></li>
-              <li><Link to="/gallery"><i className="bi bi-chevron-right"></i>  Gallery</Link></li>
+             
+              <li><Link to="/event"><i className="bi bi-chevron-right"></i> Events</Link></li>
+              <li><Link to="/news"><i className="bi bi-chevron-right"></i> News</Link></li>
+              <li><Link to="/gallery"><i className="bi bi-chevron-right"></i> Gallery</Link></li>
               <li><Link to="/contact"><i className="bi bi-chevron-right"></i> Contact Us</Link></li>
             </ul>
           </div>
@@ -43,11 +44,43 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 text-start">
             <h5 className="footer-heading">Our Seva Activities</h5>
             <ul className="footer-links">
-              <li><Link to="/our-work"><i className="bi bi-heart-pulse text-warning me-1"></i> Daily Annadanam Seva</Link></li>
-              <li><Link to="/our-work"><i className="bi bi-book text-warning me-1"></i> Free Child Education</Link></li>
-              <li><Link to="/our-work"><i className="bi bi-hospital text-warning me-1"></i> Medical Assistance Camps</Link></li>
-              <li><Link to="/our-work"><i className="bi bi-house-heart text-warning me-1"></i> Temple Seva & Darshan</Link></li>
-              <li><Link to="/donate"><i className="bi bi-award text-warning me-1"></i> Donate for Cause</Link></li>
+              <li>
+                <Link to="/our-work">
+                  <i className="bi bi-egg-fried text-warning me-1"></i> Daily Annadanam Seva
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-work">
+                  <i className="bi bi-hospital-fill text-warning me-1"></i> Medical & Eye Care Camps
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-work">
+                  <i className="bi bi-mortarboard-fill text-warning me-1"></i> Free Child Education
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-work">
+                  <i className="bi bi-people-fill text-warning me-1"></i> Community Welfare
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-work">
+                  <i className="bi bi-flower1 text-warning me-1"></i> Temple Seva & Darshan
+                </Link>
+              </li>
+              <li>
+                <Link to="/mission">
+                  <i className="bi bi-award-fill text-warning me-1"></i> Our Mission
+                </Link>
+              </li>
+              <li>
+                <Link to="/vision">
+                  <i className="bi bi-award-fill text-warning me-1"></i> Our Vision
+                </Link>
+              </li>
+              
+               
             </ul>
           </div>
 
@@ -61,12 +94,15 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Basantpur, Kendrapara, Odisha
+                Basantpur, Kendrapara, Odisha - 754134
               </a>
             </div>
             <div className="footer-contact-item">
               <i className="bi bi-telephone-fill"></i>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <div className="d-flex flex-column gap-1">
+                <a href="tel:+919437001135">+91 94370 01135</a>
+                <a href="tel:+919090210667">+91 90902 10667</a>
+              </div>
             </div>
             <div className="footer-contact-item">
               <i className="bi bi-envelope-fill"></i>

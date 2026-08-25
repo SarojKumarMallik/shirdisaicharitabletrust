@@ -1,0 +1,406 @@
+/* ==========================================================================
+   Sri Shirdi Sai Charitable Trust - Missiondesc Component Stylesheet
+   Navy Blue (#081838), Royal Gold (#C59B27) & Warm Cream (#fffbf2) Theme
+   ========================================================================== */
+
+.missiondesc-section {
+  background-color: #fffbf2;
+  padding: 60px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Ambient Glows */
+.missiondesc-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(120px);
+  z-index: 1;
+  opacity: 0.15;
+}
+
+.missiondesc-glow-1 {
+  top: -80px;
+  right: -100px;
+  background: #c59b27;
+}
+
+.missiondesc-glow-2 {
+  bottom: 150px;
+  left: -120px;
+  background: #081838;
+}
+
+.max-w-900 {
+  max-width: 900px;
+}
+
+/* Badge & Header */
+.missiondesc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197, 155, 39, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  color: #081838;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 20px;
+  border-radius: 30px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.missiondesc-main-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #081838;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  margin-top: 12px;
+}
+
+.missiondesc-highlight {
+  color: #c59b27;
+  position: relative;
+}
+
+.missiondesc-lead-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-top: 15px;
+}
+
+/* Grand Mission Statement Card */
+.mission-statement-banner {
+  background: linear-gradient(135deg, #0c2048 0%, #081838 100%);
+  border: 2px solid #c59b27;
+  border-radius: 24px;
+  color: #ffffff;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(8, 24, 56, 0.2);
+}
+
+.mission-statement-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(197, 155, 39, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mission-banner-badge {
+  background: rgba(197, 155, 39, 0.2);
+  color: #f3d068;
+  border: 1px solid rgba(243, 208, 104, 0.4);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.mission-statement-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #ffffff;
+}
+
+.mission-statement-subtext {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.btn-mission-primary {
+  background: #c59b27;
+  color: #081838;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 2px solid #c59b27;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-mission-primary:hover {
+  background: #f3d068;
+  color: #081838;
+  border-color: #f3d068;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 155, 39, 0.35);
+}
+
+.btn-mission-outline {
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-mission-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #f3d068;
+  border-color: #f3d068;
+  transform: translateY(-2px);
+}
+
+/* 4 Mission Action Cards */
+.mission-pillar-card {
+  background: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 8px 24px rgba(8, 24, 56, 0.06);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(8, 24, 56, 0.12);
+  border-color: #c59b27;
+}
+
+.mission-pillar-img-wrapper {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #081838;
+}
+
+.mission-pillar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.mission-pillar-card:hover .mission-pillar-img {
+  transform: scale(1.06);
+}
+
+.mission-pillar-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  background: rgba(8, 24, 56, 0.85);
+  color: #f3d068;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.mission-pillar-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mission-pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(197, 155, 39, 0.12);
+  color: #c59b27;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.mission-pillar-card:hover .mission-pillar-icon-box {
+  background: #081838;
+  color: #f3d068;
+  transform: scale(1.05);
+}
+
+.mission-pillar-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #081838;
+  margin-bottom: 10px;
+}
+
+.mission-pillar-desc {
+  font-size: 0.93rem;
+  color: #556270;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.mission-pillar-stat {
+  background: #fffbf2;
+  border: 1px dashed rgba(197, 155, 39, 0.4);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission-pillar-stat-num {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #c59b27;
+}
+
+.mission-pillar-stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Key Operational Commitments Section */
+.mission-commit-box {
+  background: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  border-radius: 20px;
+  padding: 36px 30px;
+  box-shadow: 0 8px 25px rgba(8, 24, 56, 0.05);
+}
+
+.commit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #fffdf8;
+  border: 1px solid rgba(197, 155, 39, 0.15);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.commit-item:hover {
+  background: #ffffff;
+  border-color: #c59b27;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.15);
+}
+
+.commit-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: #081838;
+  color: #f3d068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.commit-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #081838;
+  margin-bottom: 4px;
+}
+
+.commit-text {
+  font-size: 0.88rem;
+  color: #556270;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* Impact Metrics Counter Grid */
+.mission-metrics-row {
+  background: linear-gradient(135deg, #0c2048 0%, #081838 100%);
+  border: 2px solid #c59b27;
+  border-radius: 20px;
+  padding: 30px 20px;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(8, 24, 56, 0.18);
+}
+
+.mission-metric-card {
+  text-align: center;
+  padding: 15px;
+}
+
+.mission-metric-icon {
+  font-size: 2rem;
+  color: #f3d068;
+  margin-bottom: 8px;
+}
+
+.mission-metric-num {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f3d068;
+  margin-bottom: 4px;
+}
+
+.mission-metric-title {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .missiondesc-main-title {
+    font-size: 1.95rem;
+  }
+  .mission-statement-heading {
+    font-size: 1.4rem;
+  }
+  .mission-statement-banner {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .missiondesc-main-title {
+    font-size: 1.65rem;
+  }
+  .mission-statement-heading {
+    font-size: 1.25rem;
+  }
+  .mission-metric-num {
+    font-size: 1.6rem;
+  }
+}

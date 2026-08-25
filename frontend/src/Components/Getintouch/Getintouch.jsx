@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Getintouch.css';
-
+import contact from '../../assets/contact.jpeg';
 const Getintouch = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -60,7 +60,7 @@ const Getintouch = () => {
             {/* Featured Image Card with Floating Contact Overlay */}
             <div className="contact-hero-card position-relative rounded-4 overflow-hidden shadow-sm">
               <img
-                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=900"
+                src={contact}
                 alt="Sri Shirdi Sai Charitable Trust Volunteers"
                 className="contact-hero-img w-100"
               />

@@ -43,7 +43,7 @@ const Founder = () => {
               </div>
             </div>
 
-            
+
           </div>
 
           {/* Right Side: Image */}
@@ -62,7 +62,7 @@ const Founder = () => {
 
                 {/* Floating Experience Badge */}
                 <div className="founder-exp-badge">
-                  <div className="exp-number">15+</div>
+                  <div className="exp-number">14+</div>
                   <div className="exp-text">Years of Dedicated Service</div>
                 </div>
 

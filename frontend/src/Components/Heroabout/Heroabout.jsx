@@ -1,105 +1,97 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Heroabout.css';
+import aid from '../../assets/aid.png';
+import social from '../../assets/social.png';
+import relief from '../../assets/relief.png';
+import founder from '../../assets/founder.png';
 
 const Heroabout = () => {
   return (
     <section id="about" className="heroabout-section">
       <div className="container">
-        <div className="row align-items-center g-4 g-lg-5">
+        <div className="row align-items-stretch g-4 g-lg-5">
           {/* Left Column: 3 Overlapping Image Collage */}
-          <div className="col-lg-6">
-            <div className="heroabout-image-collage">
-              {/* Main Center Image */}
-              <img
-                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800"
-                alt="Volunteers distributing food and medical aid"
-                className="collage-img-main"
-              />
+          <div className="col-lg-5 d-flex">
+            <div className="heroabout-image-collage flex-grow-1">
               {/* Top Right Overlapping Image */}
               <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=600"
-                alt="Smiling children receiving education support"
+                src={aid}
+                alt="Educational and food support"
                 className="collage-img-top-right"
               />
-              {/* Bottom Left Overlapping Image */}
+              {/* Main Center Image */}
               <img
-                src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=600"
-                alt="Child receiving community welfare aid"
+                src={social}
+                alt="Community and welfare service"
+                className="collage-img-main"
+              />
+              {/* Bottom Overlapping Image */}
+              <img
+                src={relief}
+                alt="Healthcare and relief support"
                 className="collage-img-bottom-left"
               />
             </div>
           </div>
 
           {/* Right Column: Typography, Feature Cards & Founder Badge */}
-          <div className="col-lg-6 text-start">
-            <div className="heroabout-badge">
-              <i className="bi bi-star-fill text-warning me-1"></i> About Us
-            </div>
-
-            <h2 className="heroabout-title">
-              Growing Together, Creating Lasting Impact
-            </h2>
-
-            <div className="heroabout-desc-content mb-4">
-              <p className="heroabout-desc">
-                Sri Sri Shirdi Sai Charitable Trust is committed to serving people, supporting communities, and creating positive change in society.
-              </p>
-              <p className="heroabout-desc">
-                Led by <strong>Dr. Rudra Mohanty, Managing Director</strong>, the Trust works with compassion, honesty, and dedication to help people in need and make a meaningful difference in their lives.
-              </p>
-              <p className="heroabout-desc">
-                Inspired by the values of service, kindness, faith, and humanity, we believe that every small effort can create a positive and lasting impact.
-              </p>
-            </div>
-
-            {/* Feature Highlight Cards (Side-by-Side: Icon Top -> Heading Below -> Paragraph Below) */}
-            <div className="row g-3 mb-4">
-              {/* Mission Card */}
-              <div className="col-6">
-                <div className="heroabout-box-card">
-                  <div className="heroabout-icon-badge mb-2 mb-md-3">
-                    <i className="bi bi-bullseye"></i>
-                  </div>
-                  <h4 className="heroabout-feature-title">Our Mission</h4>
-                  <p className="heroabout-feature-desc">
-                    To build stronger communities, support those in need, and create better opportunities for a brighter future.
-                  </p>
-                </div>
+          <div className="col-lg-7 text-start d-flex flex-column justify-content-between">
+            <div>
+              <div className="heroabout-badge">
+                <i className="bi bi-star-fill text-warning me-1"></i> ABOUT US
               </div>
 
-              {/* Vision Card */}
-              <div className="col-6">
-                <div className="heroabout-box-card">
-                  <div className="heroabout-icon-badge mb-2 mb-md-3">
-                    <i className="bi bi-eye-fill"></i>
+              <h2 className="heroabout-title">
+                A JOURNEY OF FAITH, SERVICE &amp; COMMUNITY
+              </h2>
+
+              <div className="heroabout-desc-content mb-4">
+                <p className="heroabout-desc">
+                  Sri Sri Shirdi Sai Charitable Trust, Basantapur is a charitable organization dedicated to serving society through faith, compassion, education, healthcare, and community welfare. The Trust works to support people in need while promoting the values of service, humanity, and spiritual well-being.
+                </p>
+              </div>
+
+              {/* Feature Highlight Cards (History & Our Work) */}
+              <div className="row g-3 mb-4">
+                {/* History Card */}
+                <div className="col-md-6">
+                  <div className="heroabout-box-card">
+                    <div className="heroabout-icon-badge mb-2 mb-md-3">
+                      <i className="bi bi-clock-history"></i>
+                    </div>
+                    <h4 className="heroabout-feature-title">History</h4>
+                    <p className="heroabout-feature-desc">
+                      The journey of Sai Temple Basantapur began with the Bhumi Puja on 24 December 2012. Since then, the Trust has continued its spiritual and community-oriented activities, bringing people together through service, devotion, and charitable initiatives.
+                    </p>
                   </div>
-                  <h4 className="heroabout-feature-title">Our Vision</h4>
-                  <p className="heroabout-feature-desc">
-                    Empowering society through free healthcare, education support, skill development, and women empowerment.
-                  </p>
+                </div>
+
+                {/* Our Work Card */}
+                <div className="col-md-6">
+                  <div className="heroabout-box-card">
+                    <div className="heroabout-icon-badge mb-2 mb-md-3">
+                      <i className="bi bi-heart-pulse-fill"></i>
+                    </div>
+                    <h4 className="heroabout-feature-title">Our Work</h4>
+                    <p className="heroabout-feature-desc">
+                      The Trust's documented objectives include supporting education and scholarships, healthcare and medical assistance, relief for the poor, food support, charitable activities, spiritual development, and community welfare.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Bottom Action Row: CTA Button & Founder Profile (1 Row on Mobile) */}
-            <div className="heroabout-action-row">
-              <a href="/about" className="btn-heroabout-more">
+            <div className="heroabout-action-row mt-2">
+              <Link to="/about" className="btn-heroabout-more">
                 <span>More About Us</span>
                 <i className="bi bi-arrow-up-right"></i>
-              </a>
+              </Link>
 
-              <div className="heroabout-founder">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150"
-                  alt="Dr. Rudra Mohanty"
-                  className="founder-avatar"
-                />
-                <div className="founder-text-wrap">
-                  <h5 className="founder-name">Dr. Rudra Mohanty</h5>
-                  <p className="founder-role">Founder & Managing Director</p>
-                </div>
-              </div>
+              
             </div>
+
           </div>
         </div>
       </div>

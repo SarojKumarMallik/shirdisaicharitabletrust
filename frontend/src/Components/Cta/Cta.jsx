@@ -75,7 +75,7 @@ const Cta = () => {
                   <span>GET INVOLVED NOW!</span>
                 </Link>
 
-                <Link to="/donate" className="btn btn-volunteer-secondary">
+                <Link to="/contact" className="btn btn-volunteer-secondary">
                   <i className="bi bi-heart-fill me-2 text-warning"></i>
                   <span>DONATE NOW</span>
                 </Link>

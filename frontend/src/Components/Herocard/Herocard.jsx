@@ -8,7 +8,7 @@ const Herocard = () => {
       title: 'DONATE NOW!',
       desc: 'Support our noble cause to provide free food, healthcare, and education to the underprivileged communities in Kendrapara, Odisha.',
       btnText: 'DONATE NOW',
-      link: '/donate',
+      link: '/contact',
       icon: 'bi-heart-fill',
       themeClass: 'herocard-item-navy',
     },

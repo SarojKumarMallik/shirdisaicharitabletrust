@@ -176,82 +176,68 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. Bottom Action Row: Navy Button (#0c2048) & Founder Profile
+   3. Leadership Team Section Styling
    -------------------------------------------------------------------------- */
-.heroabout-action-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: nowrap;
+.heroabout-leadership-box {
+  background: linear-gradient(135deg, rgba(8, 24, 56, 0.05) 0%, rgba(197, 155, 39, 0.08) 100%);
+  border: 1px solid rgba(197, 155, 39, 0.28);
+  box-shadow: 0 6px 22px rgba(8, 24, 56, 0.04);
 }
 
-.btn-heroabout-more {
-  background: #0c2048;
-  color: #ffffff !important;
+.leadership-box-heading {
+  font-family: 'Cinzel', serif;
   font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: 0.5px;
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: 2px solid #c59b27;
-  text-decoration: none;
-  display: inline-flex;
+  color: #081838;
+  font-size: 1.05rem;
+}
+
+.leader-mini-card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 14px rgba(8, 24, 56, 0.04);
+  transition: all 0.3s ease;
+}
+
+.leader-mini-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(197, 155, 39, 0.4);
+  box-shadow: 0 8px 22px rgba(197, 155, 39, 0.12);
+}
+
+.leader-avatar-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #081838;
+  color: #f3d068;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  white-space: nowrap;
-  box-shadow: 0 5px 20px rgba(12, 32, 72, 0.35);
-  transition: all 0.35s ease;
-  text-transform: uppercase;
-}
-
-.btn-heroabout-more:hover {
-  background: #081838;
-  color: #f3d068 !important;
-  border-color: #f3d068;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(12, 32, 72, 0.55);
-}
-
-.btn-heroabout-more i {
-  font-size: 0.95rem;
-  transition: transform 0.3s ease;
-}
-
-.btn-heroabout-more:hover i {
-  transform: translate(2px, -2px);
-}
-
-.heroabout-founder {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 0.85rem;
   flex-shrink: 0;
+  border: 1.5px solid #c59b27;
 }
 
-.founder-avatar {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #c59b27;
-  box-shadow: 0 3px 10px rgba(8, 24, 56, 0.15);
-}
-
-.founder-name {
+.leader-name {
+  font-family: 'Cinzel', serif;
   font-weight: 700;
   font-size: 0.88rem;
   color: #081838;
-  margin: 0;
   line-height: 1.2;
 }
 
-.founder-role {
-  font-size: 0.78rem;
-  color: #5a6578;
-  margin: 0;
-  line-height: 1.2;
+.leader-designation {
+  font-size: 0.76rem;
+  color: #c59b27;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.leader-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
 }
 
 /* --------------------------------------------------------------------------

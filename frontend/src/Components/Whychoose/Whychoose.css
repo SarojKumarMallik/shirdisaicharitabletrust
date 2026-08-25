@@ -187,14 +187,16 @@
 .impact-list-item {
   display: flex;
   align-items: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #475569;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #081838;
+  line-height: 1.45;
 }
 
-.impact-check-icon {
+.impact-item-icon {
   color: #e67e22;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  line-height: 1;
   flex-shrink: 0;
 }
 
@@ -268,12 +270,15 @@
   .whychoose-section {
     padding: 50px 0;
   }
+
   .whychoose-title {
     font-size: 1.85rem;
   }
+
   .whychoose-main-img {
     height: 380px;
   }
+
   .whychoose-sub-img {
     height: 160px;
   }
@@ -285,15 +290,19 @@
     left: 0;
     padding: 12px 14px;
   }
+
   .volunteer-count {
     font-size: 1.15rem;
   }
+
   .whychoose-title {
     font-size: 1.55rem;
   }
+
   .whychoose-main-img {
     height: 320px;
   }
+
   .whychoose-sub-img {
     height: 130px;
   }

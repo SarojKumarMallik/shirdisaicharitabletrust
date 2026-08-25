@@ -72,17 +72,7 @@
   display: inline-block;
 }
 
-.workdesc-highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: rgba(197, 155, 39, 0.2);
-  border-radius: 4px;
-  z-index: -1;
-}
+
 
 .workdesc-lead-text {
   font-size: 1.05rem;
@@ -224,14 +214,15 @@
   transform: translateY(-3px);
 }
 
-/* Image Container - Full Equal Height */
+/* Image Container - Proportional & Clean */
 .workdesc-img-container {
   position: relative;
   overflow: hidden;
   border-radius: 22px;
   width: 100%;
   height: 100%;
-  min-height: 480px;
+  max-height: 420px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
 }
@@ -239,8 +230,8 @@
 .workdesc-feature-img {
   width: 100%;
   height: 100%;
-  min-height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 22px;
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -313,70 +304,56 @@
 .workdesc-item-title {
   font-family: 'Cinzel', serif;
   font-weight: 800;
-  font-size: 1.95rem;
+  font-size: 1.85rem;
   color: #081838;
   line-height: 1.25;
 }
 
-.workdesc-item-subtitle {
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: #c59b27 !important;
-}
-
 .workdesc-item-desc {
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   color: #3f4d63;
-  line-height: 1.65;
-}
-
-.workdesc-item-desc-extended {
-  font-size: 0.9rem;
-  color: #64748b !important;
   line-height: 1.6;
 }
 
-/* 4 Feature Key Points */
-.workdesc-point-card {
+/* Compact Points List Styling */
+.workdesc-points-list {
   background: #fdfbf7;
-  border: 1px solid rgba(197, 155, 39, 0.2);
-  border-radius: 14px;
+  border: 1px solid rgba(197, 155, 39, 0.22);
+  border-radius: 16px;
   padding: 14px 16px;
-  transition: all 0.3s ease;
 }
 
-.workdesc-point-card:hover {
-  background: #ffffff;
-  border-color: rgba(197, 155, 39, 0.45);
-  box-shadow: 0 6px 18px rgba(197, 155, 39, 0.12);
-  transform: translateY(-2px);
+.workdesc-list-item {
+  line-height: 1.45;
 }
 
-.point-icon-box {
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
+.point-list-bullet {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
   border-radius: 50%;
   background: #081838;
   color: #f3d068;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   border: 1px solid #c59b27;
+  box-shadow: 0 2px 6px rgba(8, 24, 56, 0.15);
+  margin-top: 2px;
 }
 
-.point-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.88rem;
+.point-list-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #081838;
 }
 
-.point-desc {
-  font-size: 0.78rem;
-  color: #64748b;
-  line-height: 1.45;
+.point-list-desc {
+  font-size: 0.82rem;
+  color: #5a687d;
+  font-weight: 500;
 }
 
 /* Bottom Section: Stat Grid & Action Row */
@@ -490,10 +467,34 @@
   box-shadow: 0 15px 35px rgba(8, 24, 56, 0.25);
 }
 
+.btn-quote-translate {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.45);
+  color: #f3d068 !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.btn-quote-translate:hover {
+  background: rgba(197, 155, 39, 0.25);
+  border-color: #f3d068;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
 .quote-icon {
   font-size: 2.5rem;
   color: #f3d068;
   line-height: 1;
+}
+
+.quote-content-wrapper {
+  animation: fadeIn 0.3s ease-out;
 }
 
 .quote-text {
@@ -504,11 +505,22 @@
   color: #ffffff;
 }
 
+.quote-text.odia-quote {
+  font-family: 'Kalinga', 'Nirmala UI', sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.75;
+}
+
 .quote-author {
   font-size: 0.85rem;
   color: #f3d068;
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+.quote-author.odia-author {
+  font-family: 'Kalinga', 'Nirmala UI', sans-serif;
+  font-size: 0.9rem;
 }
 
 /* --------------------------------------------------------------------------
