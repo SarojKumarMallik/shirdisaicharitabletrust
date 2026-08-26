@@ -6,6 +6,7 @@ import health from '../../assets/health.png';
 import education from '../../assets/education.png';
 import social from '../../assets/social.png';
 import hero1 from '../../assets/hero1.png';
+import saibaba from '../../assets/saibaba.png';
 
 const INITIATIVES_DATA = [
   {
@@ -229,7 +230,7 @@ const INITIATIVES_DATA = [
       { number: 'Weekly', label: 'Satsang Gatherings' },
       { number: 'Annual', label: 'Utsav Celebrations' }
     ],
-    image: hero1,
+    image: saibaba,
     impactHighlight: 'Cultivating spiritual harmony, devotional gatherings, and traditional cultural festivals.',
     ctaText: 'Support Temple Seva'
   }
